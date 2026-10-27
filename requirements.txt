@@ -1,0 +1,6 @@
+torch
+transformers>=4.46
+accelerate
+huggingface_hub>=0.34
+pillow
+numpy

@@ -1,0 +1,97 @@
+// Edge-robot architecture: how the decentralised layer (this repo, PuppyPi) connects to centralized.
+// Action names and the step/feedback format follow centralized/mission-orchestrator (SKILL.md, robots.json).
+// SmolVLM is the step executor's decision-maker; a thin code shell around it owns safety and ROS calls.
+// Render:  dot -Tpng -Gdpi=150 docs/architecture.dot -o docs/architecture.png
+//          dot -Tsvg docs/architecture.dot -o docs/architecture.svg
+digraph architecture {
+    graph [rankdir=TB, fontname="DejaVu Sans", nodesep=0.55, ranksep=0.7, pad=0.4, bgcolor="white",
+           newrank=true, label=<<b>Decentralised edge robot (PuppyPi), integrated with the centralized layer</b>>,
+           labelloc=t, fontsize=18];
+    node  [shape=box, style="rounded,filled", fontname="DejaVu Sans", fontsize=12,
+           color="#4a6fa5", fillcolor="#e8f0fb", penwidth=1.4, margin="0.25,0.12"];
+    edge  [fontname="DejaVu Sans", fontsize=10, color="#555555", fontcolor="#333333", penwidth=1.3];
+
+    subgraph cluster_central {
+        label=<<b>centralized</b>  (mission-level reasoning)>; labeljust=l;
+        style="rounded,filled"; color="#5b3c88"; fillcolor="#f6f2fb"; penwidth=2.5; fontsize=14;
+        planner      [label=<<b>Mission Planner</b><br/><font point-size="10">LLM: natural language → tasks</font>>];
+        interface    [label=<<b>Mission Interface</b><br/><font point-size="10">schema, constraints, validation</font>>];
+        orchestrator [label=<<b>Mission Orchestrator</b>  <font point-size="10">(agent skill)</font><br/><font point-size="10">allocates tasks to robots, sequences steps<br/>robots.json action lists · validate_plan.py<br/>replans on step feedback</font>>];
+        planner -> interface -> orchestrator [color="#5b3c88"];
+    }
+
+    // the rest of the fleet, executed elsewhere
+    drone  [label=<<b>drone_1 executor</b><br/><font point-size="10">PX4 · scout: search, inspect</font>>,
+            style="rounded,dashed", fillcolor="white", color="#999999", fontcolor="#777777"];
+
+    subgraph cluster_edge {
+        label=<<b>decentralised</b>  (this repo, PuppyPi, namespace /puppypi_1/…)>; labeljust=l;
+        style="rounded,filled"; color="#5b3c88"; fillcolor="#fbfbfd"; penwidth=2.5; fontsize=14;
+
+        subgraph cluster_executor {
+            label=<<b>step executor</b>  <font point-size="11">(one dispatched step at a time)</font>>; labeljust=l;
+            style="rounded,filled"; color="#c08a00"; fillcolor="#fffaf0"; penwidth=2; fontsize=13;
+
+            smolvlm [label=<<b>SmolVLM</b>  <font point-size="10">(decision-maker)</font><br/><font point-size="10">SmolVLM-Instruct (.venv, GPU)<br/>in: instruction + camera image + history<br/>out: next primitive as JSON</font>>,
+                     fillcolor="#fff3d6", color="#c08a00", penwidth=2];
+            shell [label=<<b>executor shell</b>  <font point-size="10">(code)</font><br/><font point-size="10">runs the chosen primitive via ROS<br/>safety: fall detection, timeouts, stop<br/>caps loop iterations · reports result</font>>,
+                   fillcolor="#fff3d6", color="#c08a00"];
+            menu [shape=note, style=filled, fillcolor="white", color="#c08a00", fontsize=10,
+                  label=<<b>SmolVLM picks one of:</b><br align="left"/>goto(entity)<br align="left"/>look_around()<br align="left"/>skill(name, target)<br align="left"/>report(status, observation)<br align="left"/>>];
+            { rank=same; shell; smolvlm; menu; }
+        }
+
+        semmap [label=<<b>semantic map</b><br/><font point-size="10">world entity → map pose<br/>(kitchen_door, counter, …)</font>>,
+                shape=cylinder, style=filled, fillcolor="#fff9e8", color="#c08a00"];
+
+        nav2 [label=<<b>Nav2</b><br/><font point-size="10">planner · controller · costmaps<br/>(+ slam_toolbox / map server)</font>>];
+        skills [label=<<b>manipulation skills</b><br/><font point-size="10">open · close · push · grab · putinto · puton<br/>scripted or VLA (e.g. SmolVLA) · <i>to build</i></font>>];
+
+        driver [label=<<b>puppy driver</b><br/><font point-size="10">hello_puppy.py in Isaac Sim<br/>/cmd_vel → trot gait · joint targets<br/><i>later: real PuppyPi ROS driver, same topics</i></font>>,
+                fillcolor="#e3f4e3", color="#3d8b3d"];
+
+        { rank=same; nav2; semmap; skills; }
+    }
+
+    // centralized <-> edge
+    orchestrator -> shell [label=<  <b>dispatch step</b><br/>  {step_id, action, args, instruction}<br/>  action /puppypi_1/execute_step>,
+                           color="#1f5fbf", fontcolor="#1f5fbf", penwidth=2];
+    shell -> orchestrator [label=<  <b>step result</b><br/>  done / failed / blocked<br/>  + observation, updated world>,
+                           color="#dd3333", fontcolor="#dd3333", style=dashed, penwidth=2, constraint=false];
+    orchestrator -> planner [label=<  <b>goal unreachable →</b><br/>  <b>mission replan</b>>, color="#dd3333", fontcolor="#dd3333",
+                             style=dashed, penwidth=1.6, constraint=false];
+    orchestrator -> drone  [color="#aaaaaa", style=dashed];
+    { rank=same; drone; orchestrator; }
+
+    // decision loop inside the executor
+    shell -> smolvlm [label=<step + image<br/>+ last outcome>, color="#c08a00", fontcolor="#8a6400", penwidth=1.8];
+    smolvlm -> shell [label=<next primitive>, color="#c08a00", fontcolor="#8a6400", penwidth=1.8, constraint=false];
+    menu -> shell [style=invis];  // menu | shell | SmolVLM: shell sits under the orchestrator
+
+    // primitives -> capabilities
+    shell -> semmap [label=<  resolve<br/>  entity>, color="#c08a00", fontcolor="#8a6400"];
+    shell -> nav2   [label=<  <b>goto</b>, look_around<br/>  NavigateToPose (action)>, color="#1f5fbf", fontcolor="#1f5fbf"];
+    shell -> skills [label=<  <b>skill</b>(name, target)<br/>  /manipulate (action)>, color="#1f5fbf", fontcolor="#1f5fbf"];
+
+    // data flow
+    nav2   -> driver  [label=<  /cmd_vel>];
+    skills -> driver  [label=<  joint / gripper<br/>  commands>];
+    driver -> nav2    [label=<  /odom  /tf  /scan>];
+    driver -> skills  [label=<  camera,<br/>  /joint_states>];
+    driver:e -> smolvlm:e [label=<  /camera/image_raw>, constraint=false];
+
+    // legend + notes, side by side under the edge cluster
+    legend [shape=plaintext, style="", margin=0, label=<
+      <table border="1" color="#bbbbbb" cellborder="0" cellspacing="2" cellpadding="4" style="rounded">
+        <tr><td colspan="2"><b>Legend</b></td></tr>
+        <tr><td><font color="#1f5fbf"><b>━━━▶</b></font></td><td align="left">ROS action (long-running, feedback, cancellable)</td></tr>
+        <tr><td><font color="#555555">───▶</font></td><td align="left">ROS topic (continuous stream)</td></tr>
+        <tr><td><font color="#c08a00"><b>───▶</b></font></td><td align="left">executor decision loop (in-process)</td></tr>
+        <tr><td><font color="#dd3333"><b>╌╌╌▶</b></font></td><td align="left">execution feedback / replanning</td></tr>
+        <tr><td><font color="#aaaaaa">╌╌╌▶</font></td><td align="left">other robots in the fleet (not this repo)</td></tr>
+      </table>>, fontsize=10];
+    note [shape=note, style=filled, fillcolor="#fffde7", color="#c8b400", fontsize=10,
+          label="Per step: the shell asks SmolVLM for the next primitive, runs it,\nfeeds back the new image and outcome, and repeats until SmolVLM\ncalls report(...) or a safety limit trips (then: failed / blocked).\nSteps arrive one at a time, once their depends_on steps are done.\nAll edge nodes run with use_sim_time:=true (/clock from Isaac Sim)."];
+    { rank=same; legend; note; }
+    driver -> legend [style=invis];
+}

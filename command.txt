@@ -1,0 +1,2 @@
+
+~/projects/isaacsim/_build/linux-x86_64/release/python.sh hello_puppy.py --keep-open

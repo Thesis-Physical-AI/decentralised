@@ -1,0 +1,10 @@
+# Model weights: fetched by ./install.sh
+models/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Editor backups of the USD files
+*.bak

@@ -1,0 +1,237 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.3.2"
+    }
+    defaultPrim = "puppy"
+    endTimeCode = 1000000
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = 0
+    upAxis = "Z"
+)
+
+over "puppy" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </puppy/Physics/dummy_joint>,
+        </puppy/Physics/lidar_Joint>,
+        </puppy/Physics/lb_joint1>,
+        </puppy/Physics/rb_joint1>,
+        </puppy/Physics/rf_joint1>,
+        </puppy/Physics/lf_joint1>,
+        </puppy/Physics/camera_joint>,
+        </puppy/Physics/lb_joint2>,
+        </puppy/Physics/lb_joint3>,
+        </puppy/Physics/rb_joint2>,
+        </puppy/Physics/rb_joint3>,
+        </puppy/Physics/rf_joint2>,
+        </puppy/Physics/rf_joint3>,
+        </puppy/Physics/lf_joint2>,
+        </puppy/Physics/lf_joint3>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </puppy/Geometry/base_link>,
+        </puppy/Geometry/base_link/base_dummy>,
+        </puppy/Geometry/base_link/base_dummy/lb_link1>,
+        </puppy/Geometry/base_link/base_dummy/lb_link1/lb_link2>,
+        </puppy/Geometry/base_link/base_dummy/lb_link1/lb_link2/lb_link3>,
+        </puppy/Geometry/base_link/base_dummy/rb_link1>,
+        </puppy/Geometry/base_link/base_dummy/rb_link1/rb_link2>,
+        </puppy/Geometry/base_link/base_dummy/rb_link1/rb_link2/rb_link3>,
+        </puppy/Geometry/base_link/base_dummy/rf_link1>,
+        </puppy/Geometry/base_link/base_dummy/rf_link1/rf_link2>,
+        </puppy/Geometry/base_link/base_dummy/rf_link1/rf_link2/rf_link3>,
+        </puppy/Geometry/base_link/base_dummy/lf_link1>,
+        </puppy/Geometry/base_link/base_dummy/lf_link1/lf_link2>,
+        </puppy/Geometry/base_link/base_dummy/lf_link1/lf_link2/lf_link3>,
+        </puppy/Geometry/base_link/base_dummy/camera_link>,
+        </puppy/Geometry/base_link/lidar_frame>,
+    ]
+    token isaac:robotType = "Default"
+
+    over "Geometry"
+    {
+        over "base_link" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "base_dummy" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "lb_link1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "lb_link2" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "lb_link3" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                        }
+                    }
+                }
+
+                over "rb_link1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "rb_link2" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "rb_link3" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                        }
+                    }
+                }
+
+                over "rf_link1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "rf_link2" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "rf_link3" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                        }
+                    }
+                }
+
+                over "lf_link1" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "lf_link2" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "lf_link3" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                        }
+                    }
+                }
+
+                over "camera_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "lidar_frame" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "dummy_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "lidar_Joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "lb_joint1" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "lb_joint2" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rb_joint1" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rb_joint2" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rf_joint1" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rf_joint2" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "lf_joint1" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "lf_joint2" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "camera_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "lf_joint3" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rf_joint3" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "lb_joint3" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "rb_joint3" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+
