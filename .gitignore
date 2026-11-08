@@ -8,3 +8,6 @@ __pycache__/
 
 # Editor backups of the USD files
 *.bak
+
+# Prototype run outputs
+runs/

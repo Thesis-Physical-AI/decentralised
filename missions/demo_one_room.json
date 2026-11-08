@@ -1,0 +1,16 @@
+{
+  "_comment": "PuppyPi-only steps in contract v0.1 form (centralized/docs/INTERFACE_CONTRACTS.md). S4 is expected to end BLOCKED/OBJECT_NOT_FOUND (the toy is not in the scene) and S5 REJECTED (no manipulator).",
+  "mission_id": "M-SIM-001",
+  "steps": [
+    {"step_id": "S1", "task_id": "T1", "action": "movetowards", "args": {"target": "table"},
+     "instruction": "[movetowards] table", "depends_on": [], "timeout_s": 90},
+    {"step_id": "S2", "task_id": "T1", "action": "search", "args": {"object": "apple", "area": "living_room"},
+     "instruction": "[search] apple in living_room", "depends_on": ["S1"], "timeout_s": 90},
+    {"step_id": "S3", "task_id": "T2", "action": "movetowards", "args": {"target": "crate"},
+     "instruction": "[movetowards] crate", "depends_on": ["S2"], "timeout_s": 120},
+    {"step_id": "S4", "task_id": "T2", "action": "search", "args": {"object": "toy", "area": "living_room"},
+     "instruction": "[search] toy in living_room", "depends_on": ["S3"], "timeout_s": 120},
+    {"step_id": "S5", "task_id": "T3", "action": "grab", "args": {"object": "apple"},
+     "instruction": "[grab] apple", "depends_on": ["S2"], "timeout_s": 30}
+  ]
+}

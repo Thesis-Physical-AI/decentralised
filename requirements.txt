@@ -1,6 +1,9 @@
-torch
-transformers>=4.46
-accelerate
-huggingface_hub>=0.34
-pillow
-numpy
+# VLM environment (.venv): SmolVLM server and experiments. Not needed for the Isaac Sim simulation.
+# Pinned 2026-11-08, verified on Ubuntu 24.04, RTX 4080, Python 3.12.
+# transformers 5.x removed AutoModelForVision2Seq; use AutoModelForImageTextToText.
+torch==2.15.0
+transformers==5.22.2
+accelerate==1.15.0
+huggingface_hub==2.4.0
+pillow==13.0.0
+numpy==2.5.4
