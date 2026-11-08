@@ -45,16 +45,11 @@ from isaacsim.core.simulation_manager import SimulationManager
 from isaacsim.core.utils.viewports import set_camera_view
 from pxr import Usd, UsdPhysics
 
+from puppy_agent.gait import LEGS, LOW_HEIGHT, STAND_HEIGHT, leg_ik  # leg geometry and IK, shared with the executor
+
 ROBOT_PATH = "/World/Puppy"
 SPAWN_Z = 0.25
 PHYSICS_DT = 1.0 / 120.0
-
-# Leg geometry, measured from the joint offsets in payloads/Physics/physics.usda.
-LEGS = ("lf", "rf", "lb", "rb")
-THIGH = 0.0745  # hip (joint1) -> knee (joint2)
-SHIN = 0.075  # knee (joint2) -> foot (joint3)
-STAND_HEIGHT = 0.10  # foot depth below the hip when standing
-LOW_HEIGHT = 0.05  # foot depth below the hip when crouched
 
 
 def step(n):
@@ -141,18 +136,6 @@ def check_joints(robot):
 
 
 # ---------------------------------------------------------------- leg control
-def leg_ik(y, z):
-    """Hip and knee angles (rad) that put the foot at (y, z) m from the hip; +y is backward, +z is up.
-
-    At zero the thigh hangs straight down and the shin points forward, and a positive angle on either
-    joint swings the foot backward. The knee bends backward, like the default zero pose.
-    """
-    d = min(max(math.hypot(y, z), 0.04), THIGH + SHIN - 1e-3)
-    knee_bend = -math.acos((d * d - THIGH * THIGH - SHIN * SHIN) / (2 * THIGH * SHIN))
-    hip = math.atan2(y, -z) - math.atan2(SHIN * math.sin(knee_bend), THIGH + SHIN * math.cos(knee_bend))
-    return hip, knee_bend + math.pi / 2
-
-
 class Puppy:
     """Joint-target interface for the PuppyPi: movements describe where each foot goes, this does the rest."""
 

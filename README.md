@@ -23,9 +23,15 @@ So far only the puppy driver (`hello_puppy.py`, without ROS yet) and the SmolVLM
 | Path | What it is |
 | --- | --- |
 | `hello_puppy.py` | Loads the PuppyPi into Isaac Sim and runs a sequence of movements (stand, walk, turn, sit, wave, ...). |
+| `run_prototype.py` | **Experimental:** runs mission steps through the step executor in Isaac Sim, with SmolVLM or ground-truth perception. See [`docs/PROTOTYPE.md`](docs/PROTOTYPE.md). |
+| `puppy_agent/` | Step executor, Nav2-shaped navigation interface, perception interface, gait and IK. Plain Python, unit-tested. |
+| `sim/` | Isaac Sim driver for the prototype (velocity-driven gait, front camera) and world files. |
+| `vlm_server/` | SmolVLM perception server (yes/no visibility questions over local HTTP). |
+| `missions/` | Example mission steps in contract v0.1 form. |
+| `tests/unit/` | GPU-free tests: `python -m pytest -q tests/unit`. |
 | `puppy_isaac/` | The PuppyPi robot as USD, converted from URDF. Physics lives behind a `Physics` variant (`physx`, `mujoco`, `physics`, `none`). |
 | `install.sh` | One-shot setup: Python venv, requirements, SmolVLM weights. |
-| `requirements.txt` | Python dependencies for the venv (torch, transformers, accelerate, huggingface_hub, ...). |
+| `requirements.txt` | Pinned Python dependencies for the VLM venv (torch, transformers, accelerate, huggingface_hub, ...). |
 | `docs/` | Architecture diagram (`architecture.dot` source, rendered `.png` / `.svg`). |
 | `models/` | Downloaded model weights (created by `install.sh`, git-ignored). |
 
@@ -89,8 +95,8 @@ source .venv/bin/activate
 ```
 
 ```python
-from transformers import AutoProcessor, AutoModelForVision2Seq
+from transformers import AutoProcessor, AutoModelForImageTextToText
 
 processor = AutoProcessor.from_pretrained("models/SmolVLM-Instruct")
-model = AutoModelForVision2Seq.from_pretrained("models/SmolVLM-Instruct", torch_dtype="auto", device_map="auto")
+model = AutoModelForImageTextToText.from_pretrained("models/SmolVLM-Instruct", dtype="auto", device_map="auto")
 ```
