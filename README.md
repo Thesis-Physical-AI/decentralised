@@ -3,13 +3,21 @@
 A simulated Hiwonder PuppyPi quadruped in Isaac Sim 6.x, plus a Python environment with the
 [SmolVLM](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct) vision-language model.
 
-## Architecture
+> **System documentation (source of truth for both repos)** lives in the centralized repo:
+> [Architecture](https://github.com/Thesis-Physical-AI/centralized/blob/main/docs/SYSTEM_ARCHITECTURE.md) ·
+> [Interface contracts](https://github.com/Thesis-Physical-AI/centralized/blob/main/docs/INTERFACE_CONTRACTS.md) ·
+> [Open decisions](https://github.com/Thesis-Physical-AI/centralized/blob/main/docs/DECISIONS.md) ·
+> [Roadmap](https://github.com/Thesis-Physical-AI/centralized/blob/main/docs/ROADMAP.md).
+> Agent rules for this repo: [`AGENTS.md`](AGENTS.md).
+
+## Architecture (target design)
 
 ![Architecture](docs/architecture.png)
 
-This repo is the edge side of the system: it runs on the PuppyPi (`puppypi_1`) and executes steps dispatched by
-the Mission Orchestrator in the [centralized](../centralized) layer, reporting each step's result back so the
-orchestrator can replan. The diagram is generated from [`docs/architecture.dot`](docs/architecture.dot):
+This repo is the edge side of the system. It targets the PuppyPi (`puppypi_1`): it will execute steps dispatched by
+the Mission Orchestrator in the [centralized](../centralized) layer and report each step's result back so the
+orchestrator can replan. **Today it runs only in Isaac Sim on the workstation**; the diagram shows the target
+design, not the current state. It is generated from [`docs/architecture.dot`](docs/architecture.dot):
 
 ```bash
 dot -Tpng -Gdpi=150 docs/architecture.dot -o docs/architecture.png
@@ -54,7 +62,11 @@ Options, passed as environment variables:
 The model's ONNX exports (`onnx/`, ~25 GB) are skipped, since torch/transformers only need `model.safetensors`.
 
 Isaac Sim itself is not installed by the script: build Isaac Sim 6.x from source and point `ISAACSIM_PATH` at its
-release directory.
+release directory. The paths below assume `~/Projects/isaacsim`; replace them with your `$ISAACSIM_PATH`.
+Don't move a source build after building it: it contains absolute symlinks and `python.sh` then fails with
+`No module named 'isaacsim'`.
+
+The SmolVLM download is only needed for VLM experiments, not for the simulation.
 
 ## Running the simulation
 
