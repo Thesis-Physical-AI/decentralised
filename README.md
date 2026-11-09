@@ -24,7 +24,9 @@ dot -Tpng -Gdpi=150 docs/architecture.dot -o docs/architecture.png
 dot -Tsvg docs/architecture.dot -o docs/architecture.svg
 ```
 
-So far only the puppy driver (`hello_puppy.py`, without ROS yet) and the SmolVLM download exist; the other nodes are planned.
+So far: the puppy driver (`hello_puppy.py`, without ROS yet) and an experimental step-executor prototype in which the
+VLM answers closed visual questions and can choose navigation goals, running under an emulated Raspberry Pi 5 profile
+([`docs/PROTOTYPE.md`](docs/PROTOTYPE.md), [`docs/ONBOARD_VLM.md`](docs/ONBOARD_VLM.md)). ROS 2 and Nav2 are planned.
 
 ## Contents
 
@@ -33,14 +35,16 @@ So far only the puppy driver (`hello_puppy.py`, without ROS yet) and the SmolVLM
 | `hello_puppy.py` | Loads the PuppyPi into Isaac Sim and runs a sequence of movements (stand, walk, turn, sit, wave, ...). |
 | `run_prototype.py` | **Experimental:** runs mission steps through the step executor in Isaac Sim, with SmolVLM or ground-truth perception. See [`docs/PROTOTYPE.md`](docs/PROTOTYPE.md). |
 | `puppy_agent/` | Step executor, Nav2-shaped navigation interface, perception interface, gait and IK. Plain Python, unit-tested. |
-| `sim/` | Isaac Sim driver for the prototype (velocity-driven gait, front camera) and world files. |
-| `vlm_server/` | SmolVLM perception server (yes/no visibility questions over local HTTP). |
+| `sim/` | Isaac Sim driver for the prototype (velocity-driven gait, front camera, ground-truth boxes), world files, and `capture_dataset.py` for labelled benchmark images. |
+| `vlm_server/` | SmolVLM perception server: closed questions (visible? left/center/right? near?) over local HTTP, under an onboard-computer profile. |
+| `config/onboard_profiles.json` | Onboard-computer profiles (workstation GPU, emulated Raspberry Pi 5). |
+| `bench/` | Onboard model benchmark (`vlm_bench.py`) and its results; model choice in [`docs/ONBOARD_VLM.md`](docs/ONBOARD_VLM.md). |
 | `missions/` | Example mission steps in contract v0.1 form. |
 | `tests/unit/` | GPU-free tests: `python -m pytest -q tests/unit`. |
 | `puppy_isaac/` | The PuppyPi robot as USD, converted from URDF. Physics lives behind a `Physics` variant (`physx`, `mujoco`, `physics`, `none`). |
 | `install.sh` | One-shot setup: Python venv, requirements, SmolVLM weights. |
 | `requirements.txt` | Pinned Python dependencies for the VLM venv (torch, transformers, accelerate, huggingface_hub, ...). |
-| `docs/` | Architecture diagram (`architecture.dot` source, rendered `.png` / `.svg`). |
+| `docs/` | Architecture diagram (`architecture.dot` source, rendered `.png` / `.svg`), prototype and onboard-VLM notes. |
 | `models/` | Downloaded model weights (created by `install.sh`, git-ignored). |
 
 ## Setup
@@ -61,7 +65,7 @@ Options, passed as environment variables:
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | `PYTHON` | `python3` | Interpreter used to create the venv. |
-| `MODEL_ID` | `HuggingFaceTB/SmolVLM-Instruct` | Hugging Face model to download, e.g. `HuggingFaceTB/SmolVLM-500M-Instruct` for a smaller one. |
+| `MODEL_ID` | `HuggingFaceTB/SmolVLM-Instruct` | Hugging Face model to download. For onboard (Raspberry Pi 5) use, `HuggingFaceTB/SmolVLM-500M-Instruct` is recommended ([`docs/ONBOARD_VLM.md`](docs/ONBOARD_VLM.md)). |
 | `ISAACSIM_PATH` | `~/Projects/isaacsim/_build/linux-x86_64/release` | Isaac Sim release build directory. |
 | `HF_HUB_DISABLE_XET` | `1` | Downloads over plain HTTP. Set to `0` to use Hugging Face's Xet transfer instead. |
 

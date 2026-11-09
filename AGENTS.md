@@ -15,7 +15,7 @@ If both repos are checked out side by side, the same files are at `../centralize
 ## What this repo owns
 Per-robot execution: ⑥ Step Executor, ⑦ Action Selector (the agent's VLA slot — currently a VLM, plus a rule-based baseline), ⑧ capabilities (gait, Nav2 integration, skills, PX4 integration), ⑨ platform drivers (Isaac Sim, later hardware). It does **not** decompose missions, allocate tasks, or own the world model.
 
-Current state (see architecture §13): only `hello_puppy.py` (PuppyPi in Isaac Sim, scripted gait, no ROS) and the SmolVLM download exist. `docs/architecture.dot` is the **target design**, not current state.
+Current state (see architecture §13): `hello_puppy.py` (PuppyPi in Isaac Sim, scripted gait, no ROS) plus an experimental step-executor prototype (`run_prototype.py`, `puppy_agent/`, `sim/`, `vlm_server/`; see `docs/PROTOTYPE.md`) in which the VLM answers closed visual questions and can pick navigation goals, under an emulated onboard-computer profile (`config/onboard_profiles.json`, `docs/ONBOARD_VLM.md`). No ROS 2 or Nav2 yet. `docs/architecture.dot` is the **target design**, not current state.
 
 ## Rules
 - Follow the shared rules in `AGENT_WORKFLOW.md` §2. In short: stay in your layer; contract changes need an ADR + version bump; never claim planned work is done; report doc/code discrepancies instead of choosing one; don't weaken tests; no new frameworks without an ADR.
@@ -26,7 +26,7 @@ Current state (see architecture §13): only `hello_puppy.py` (PuppyPi in Isaac S
 - Isaac Sim code runs under Isaac Sim's Python; VLM code under the `.venv`; ROS nodes (later) under ROS 2 Jazzy's Python. Keep pure logic (IK, action mapping, validation) importable without any of them so it can be unit-tested.
 
 ## Checks (run before finishing)
-There is no automated test suite yet. If you changed simulation code, run the headless check and paste the output into the PR:
+GPU-free unit tests (also run in CI): `python -m pytest -q tests/unit`. If you changed simulation code, also run the headless check and paste the output into the PR:
 ```bash
 $ISAACSIM_PATH/python.sh hello_puppy.py --headless --check --moves stand walk_forward turn_left
 ```

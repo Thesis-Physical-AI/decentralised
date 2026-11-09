@@ -1,0 +1,930 @@
+{"image": "000.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.372342050075531}
+{"image": "000.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.39538538455963135}
+{"image": "000.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8433042764663696}
+{"image": "000.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5026559233665466}
+{"image": "000.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.39630451798439026}
+{"image": "001.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3948419988155365}
+{"image": "001.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4757485091686249}
+{"image": "001.png", "entity": "crate", "phrase": "a blue box", "area": 286, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.7766944169998169}
+{"image": "001.png", "entity": "crate", "phrase": "a blue box", "area": 286, "task": "where", "expected": "center", "cx": 0.514, "crops": {"left": 0.5904697775840759, "center": 0.8494013547897339, "right": 0.8627498149871826}, "words": {"left": 0.4431765675544739, "center": 0.13521794974803925, "right": 0.42160552740097046}}
+{"image": "001.png", "entity": "crate", "phrase": "a blue box", "area": 286, "task": "near", "expected": false, "p_yes": 0.46665140986442566, "p_lowres": 0.8854406476020813}
+{"image": "001.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 357, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.7885319590568542}
+{"image": "001.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 357, "task": "where", "expected": "left", "cx": 0.097, "crops": {"left": 0.7853708863258362, "center": 0.3440731465816498, "right": 0.5945268869400024}, "words": {"left": 0.7107583284378052, "center": 0.09490896016359329, "right": 0.19433274865150452}}
+{"image": "001.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 357, "task": "near", "expected": false, "p_yes": 0.46076083183288574, "p_lowres": 0.8357502222061157}
+{"image": "001.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3293074667453766}
+{"image": "002.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4406573176383972}
+{"image": "002.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5253507494926453}
+{"image": "002.png", "entity": "crate", "phrase": "a blue box", "area": 936, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8890641331672668}
+{"image": "002.png", "entity": "crate", "phrase": "a blue box", "area": 936, "task": "near", "expected": false, "p_yes": 0.5336955785751343, "p_lowres": 0.8553463816642761}
+{"image": "002.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.531096339225769}
+{"image": "002.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 558, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9220170378684998}
+{"image": "002.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 558, "task": "where", "expected": "left", "cx": 0.066, "crops": {"left": 0.8442047238349915, "center": 0.2746601700782776, "right": 0.5133568644523621}, "words": {"left": 0.7957214117050171, "center": 0.06861153244972229, "right": 0.1356671154499054}}
+{"image": "002.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 558, "task": "near", "expected": false, "p_yes": 0.5601521134376526, "p_lowres": 0.8824142217636108}
+{"image": "002.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.34545886516571045}
+{"image": "003.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.46630725264549255}
+{"image": "003.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4958239793777466}
+{"image": "003.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8512238264083862}
+{"image": "003.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7999019026756287}
+{"image": "003.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4862653315067291}
+{"image": "004.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3468082547187805}
+{"image": "004.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.36042532324790955}
+{"image": "004.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8015334606170654}
+{"image": "004.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9837214350700378}
+{"image": "004.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.30012261867523193}
+{"image": "004.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 930, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.32316020131111145}
+{"image": "004.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 930, "task": "where", "expected": "center", "cx": 0.627, "crops": {"left": 0.23674225807189941, "center": 0.36039936542510986, "right": 0.4733743369579315}, "words": {"left": 0.5807260274887085, "center": 0.09007469564676285, "right": 0.32919934391975403}}
+{"image": "004.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 930, "task": "near", "expected": false, "p_yes": 0.26958805322647095, "p_lowres": 0.5037493109703064}
+{"image": "005.png", "entity": "table", "phrase": "a brown box", "area": 1352, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9491888284683228}
+{"image": "005.png", "entity": "table", "phrase": "a brown box", "area": 1352, "task": "near", "expected": false, "p_yes": 0.5392135381698608, "p_lowres": 0.8195708990097046}
+{"image": "005.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9372000694274902}
+{"image": "005.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9588611125946045}
+{"image": "005.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7462708353996277}
+{"image": "006.png", "entity": "table", "phrase": "a brown box", "area": 1674, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.934632420539856}
+{"image": "006.png", "entity": "table", "phrase": "a brown box", "area": 1674, "task": "where", "expected": "left", "cx": 0.242, "crops": {"left": 0.94942706823349, "center": 0.8508843779563904, "right": 0.49106308817863464}, "words": {"left": 0.8701204061508179, "center": 0.049692872911691666, "right": 0.08018673211336136}}
+{"image": "006.png", "entity": "table", "phrase": "a brown box", "area": 1674, "task": "near", "expected": false, "p_yes": 0.603230357170105, "p_lowres": 0.9350829720497131}
+{"image": "006.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8853380084037781}
+{"image": "006.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5088019967079163}
+{"image": "006.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 570, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9382461309432983}
+{"image": "006.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 570, "task": "where", "expected": "right", "cx": 0.836, "crops": {"left": 0.7304889559745789, "center": 0.5139924883842468, "right": 0.9561740756034851}, "words": {"left": 0.3960484564304352, "center": 0.10934450477361679, "right": 0.4946070611476898}}
+{"image": "006.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 570, "task": "near", "expected": false, "p_yes": 0.49953603744506836, "p_lowres": 0.9129962921142578}
+{"image": "006.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4670279324054718}
+{"image": "007.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4855087101459503}
+{"image": "007.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5269908905029297}
+{"image": "007.png", "entity": "crate", "phrase": "a blue box", "area": 714, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9415057301521301}
+{"image": "007.png", "entity": "crate", "phrase": "a blue box", "area": 714, "task": "where", "expected": "left", "cx": 0.292, "crops": {"left": 0.9481364488601685, "center": 0.8426733016967773, "right": 0.9083231687545776}, "words": {"left": 0.7006217241287231, "center": 0.1372862458229065, "right": 0.16209198534488678}}
+{"image": "007.png", "entity": "crate", "phrase": "a blue box", "area": 714, "task": "near", "expected": false, "p_yes": 0.5583477020263672, "p_lowres": 0.8813556432723999}
+{"image": "007.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.7540348768234253}
+{"image": "007.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5394310355186462}
+{"image": "008.png", "entity": "table", "phrase": "a brown box", "area": 6188, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9199306964874268}
+{"image": "008.png", "entity": "table", "phrase": "a brown box", "area": 6188, "task": "where", "expected": "right", "cx": 0.945, "crops": {"left": 0.39540910720825195, "center": 0.2900125980377197, "right": 0.9465572237968445}, "words": {"left": 0.582227349281311, "center": 0.0867709368467331, "right": 0.33100175857543945}}
+{"image": "008.png", "entity": "table", "phrase": "a brown box", "area": 6188, "task": "near", "expected": true, "p_yes": 0.6104929447174072, "p_lowres": 0.7250364422798157}
+{"image": "008.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4027411937713623}
+{"image": "008.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8708057999610901}
+{"image": "008.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.37743398547172546}
+{"image": "008.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5252042412757874}
+{"image": "008.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.33107495307922363}
+{"image": "009.png", "entity": "table", "phrase": "a brown box", "area": 4104, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9413084983825684}
+{"image": "009.png", "entity": "table", "phrase": "a brown box", "area": 4104, "task": "where", "expected": "center", "cx": 0.464, "crops": {"left": 0.95688796043396, "center": 0.9849882125854492, "right": 0.8540088534355164}, "words": {"left": 0.6164531111717224, "center": 0.16451789438724518, "right": 0.21902890503406525}}
+{"image": "009.png", "entity": "table", "phrase": "a brown box", "area": 4104, "task": "near", "expected": false, "p_yes": 0.6168303489685059, "p_lowres": 0.9064865112304688}
+{"image": "009.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9332994222640991}
+{"image": "009.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.46089544892311096}
+{"image": "009.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2872215807437897}
+{"image": "009.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5115988850593567}
+{"image": "010.png", "entity": "table", "phrase": "a brown box", "area": 1080, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.6796680688858032}
+{"image": "010.png", "entity": "table", "phrase": "a brown box", "area": 1080, "task": "where", "expected": "left", "cx": 0.061, "crops": {"left": 0.8780432939529419, "center": 0.3956553637981415, "right": 0.31333112716674805}, "words": {"left": 0.64037024974823, "center": 0.09607335180044174, "right": 0.2635563611984253}}
+{"image": "010.png", "entity": "table", "phrase": "a brown box", "area": 1080, "task": "near", "expected": false, "p_yes": 0.28357401490211487, "p_lowres": 0.5121073722839355}
+{"image": "010.png", "entity": "crate", "phrase": "a blue box", "area": 816, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8255152702331543}
+{"image": "010.png", "entity": "crate", "phrase": "a blue box", "area": 816, "task": "where", "expected": "right", "cx": 0.858, "crops": {"left": 0.9035865068435669, "center": 0.7204846739768982, "right": 0.947726309299469}, "words": {"left": 0.44874516129493713, "center": 0.11943410336971283, "right": 0.4318207800388336}}
+{"image": "010.png", "entity": "crate", "phrase": "a blue box", "area": 816, "task": "near", "expected": false, "p_yes": 0.4419298470020294, "p_lowres": 0.9312149882316589}
+{"image": "010.png", "entity": "toy", "phrase": "a yellow ball", "area": 3599, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.98497074842453}
+{"image": "010.png", "entity": "toy", "phrase": "a yellow ball", "area": 3599, "task": "near", "expected": true, "p_yes": 0.7693412899971008, "p_lowres": 0.8974036574363708}
+{"image": "010.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 154, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8677114844322205}
+{"image": "010.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 154, "task": "where", "expected": "center", "cx": 0.467, "crops": {"left": 0.8896953463554382, "center": 0.8551995754241943, "right": 0.41657689213752747}, "words": {"left": 0.5953848958015442, "center": 0.12879173457622528, "right": 0.2758234143257141}}
+{"image": "010.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 154, "task": "near", "expected": false, "p_yes": 0.4260762631893158, "p_lowres": 0.8556427955627441}
+{"image": "010.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.45866838097572327}
+{"image": "011.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.43576690554618835}
+{"image": "011.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.43401476740837097}
+{"image": "011.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8983489274978638}
+{"image": "011.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.43668630719184875}
+{"image": "012.png", "entity": "table", "phrase": "a brown box", "area": 2244, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9525580406188965}
+{"image": "012.png", "entity": "table", "phrase": "a brown box", "area": 2244, "task": "where", "expected": "center", "cx": 0.567, "crops": {"left": 0.35064759850502014, "center": 0.9705735445022583, "right": 0.9536324739456177}, "words": {"left": 0.5789245367050171, "center": 0.1774614453315735, "right": 0.24361398816108704}}
+{"image": "012.png", "entity": "table", "phrase": "a brown box", "area": 2244, "task": "near", "expected": false, "p_yes": 0.5927416682243347, "p_lowres": 0.8713385462760925}
+{"image": "012.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9302523136138916}
+{"image": "012.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5205020308494568}
+{"image": "012.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.40868139266967773}
+{"image": "012.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.6282444000244141}
+{"image": "013.png", "entity": "table", "phrase": "a brown box", "area": 37740, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9436390995979309}
+{"image": "013.png", "entity": "table", "phrase": "a brown box", "area": 37740, "task": "where", "expected": "left", "cx": 0.264, "crops": {"left": 0.8093530535697937, "center": 0.9470400214195251, "right": 0.4791147708892822}, "words": {"left": 0.7662718892097473, "center": 0.05504433810710907, "right": 0.178683802485466}}
+{"image": "013.png", "entity": "table", "phrase": "a brown box", "area": 37740, "task": "near", "expected": true, "p_yes": 0.6183875799179077, "p_lowres": 0.7998927235603333}
+{"image": "013.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5557935833930969}
+{"image": "013.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8704212307929993}
+{"image": "013.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5311437845230103}
+{"image": "013.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.621609091758728}
+{"image": "013.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5211779475212097}
+{"image": "014.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.27471527457237244}
+{"image": "014.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.33691543340682983}
+{"image": "014.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8020709156990051}
+{"image": "014.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.32980814576148987}
+{"image": "014.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 1950, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9415240287780762}
+{"image": "014.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 1950, "task": "where", "expected": "right", "cx": 0.745, "crops": {"left": 0.33277738094329834, "center": 0.8986484408378601, "right": 0.9718628525733948}, "words": {"left": 0.576855480670929, "center": 0.12354233115911484, "right": 0.299602210521698}}
+{"image": "014.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 1950, "task": "near", "expected": false, "p_yes": 0.5705710649490356, "p_lowres": 0.8630008101463318}
+{"image": "014.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.20886927843093872}
+{"image": "015.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5037931799888611}
+{"image": "015.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.430070698261261}
+{"image": "015.png", "entity": "crate", "phrase": "a blue box", "area": 164, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8795884847640991}
+{"image": "015.png", "entity": "crate", "phrase": "a blue box", "area": 164, "task": "where", "expected": "left", "cx": 0.005, "crops": {"left": 0.8081991076469421, "center": 0.852349042892456, "right": 0.9438300728797913}, "words": {"left": 0.590099036693573, "center": 0.14828121662139893, "right": 0.2616197168827057}}
+{"image": "015.png", "entity": "crate", "phrase": "a blue box", "area": 164, "task": "near", "expected": false, "p_yes": 0.40573379397392273, "p_lowres": 0.7571994066238403}
+{"image": "015.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.7761308550834656}
+{"image": "015.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.45219525694847107}
+{"image": "016.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2177245020866394}
+{"image": "016.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.44110533595085144}
+{"image": "016.png", "entity": "crate", "phrase": "a blue box", "area": 414, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.851952314376831}
+{"image": "016.png", "entity": "crate", "phrase": "a blue box", "area": 414, "task": "near", "expected": false, "p_yes": 0.4729297161102295, "p_lowres": 0.8449622988700867}
+{"image": "016.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 2652, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8310916423797607}
+{"image": "016.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 2652, "task": "where", "expected": "left", "cx": 0.059, "crops": {"left": 0.9387640953063965, "center": 0.2982338070869446, "right": 0.573282778263092}, "words": {"left": 0.7759000062942505, "center": 0.08794945478439331, "right": 0.13615046441555023}}
+{"image": "016.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 2652, "task": "near", "expected": true, "p_yes": 0.44715994596481323, "p_lowres": 0.8341156840324402}
+{"image": "016.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4032042622566223}
+{"image": "017.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.38111111521720886}
+{"image": "017.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4531446397304535}
+{"image": "017.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8258070945739746}
+{"image": "017.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.978573739528656}
+{"image": "017.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3998011350631714}
+{"image": "017.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 437, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.4502427577972412}
+{"image": "017.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 437, "task": "where", "expected": "left", "cx": 0.069, "crops": {"left": 0.5056631565093994, "center": 0.2872348725795746, "right": 0.4140776991844177}, "words": {"left": 0.5565246343612671, "center": 0.1196044534444809, "right": 0.3238708972930908}}
+{"image": "017.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 437, "task": "near", "expected": false, "p_yes": 0.24625781178474426, "p_lowres": 0.5912029147148132}
+{"image": "018.png", "entity": "table", "phrase": "a brown box", "area": 416, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.5665024518966675}
+{"image": "018.png", "entity": "table", "phrase": "a brown box", "area": 416, "task": "where", "expected": "right", "cx": 0.992, "crops": {"left": 0.42974624037742615, "center": 0.2474350929260254, "right": 0.5648792386054993}, "words": {"left": 0.5764164924621582, "center": 0.1150423213839531, "right": 0.3085411489009857}}
+{"image": "018.png", "entity": "table", "phrase": "a brown box", "area": 416, "task": "near", "expected": true, "p_yes": 0.2618275582790375, "p_lowres": 0.6657090187072754}
+{"image": "018.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3822256326675415}
+{"image": "018.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5920798182487488}
+{"image": "019.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4877544045448303}
+{"image": "019.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.513086199760437}
+{"image": "019.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8882633447647095}
+{"image": "019.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.632475733757019}
+{"image": "019.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 168, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.5438623428344727}
+{"image": "019.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 168, "task": "where", "expected": "right", "cx": 0.911, "crops": {"left": 0.30652785301208496, "center": 0.5088282227516174, "right": 0.6904502511024475}, "words": {"left": 0.5235534310340881, "center": 0.13473433256149292, "right": 0.34171223640441895}}
+{"image": "019.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 168, "task": "near", "expected": false, "p_yes": 0.3193958103656769, "p_lowres": 0.5780202150344849}
+{"image": "020.png", "entity": "table", "phrase": "a brown box", "area": 9143, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.6919296979904175}
+{"image": "020.png", "entity": "table", "phrase": "a brown box", "area": 9143, "task": "where", "expected": "right", "cx": 0.934, "crops": {"left": 0.3100722134113312, "center": 0.4632583558559418, "right": 0.8828899264335632}, "words": {"left": 0.5674383640289307, "center": 0.11936266720294952, "right": 0.3131989538669586}}
+{"image": "020.png", "entity": "table", "phrase": "a brown box", "area": 9143, "task": "near", "expected": true, "p_yes": 0.3805822432041168, "p_lowres": 0.8163920640945435}
+{"image": "020.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3193729817867279}
+{"image": "020.png", "entity": "crate", "phrase": "a blue box", "area": 612, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.928594708442688}
+{"image": "020.png", "entity": "crate", "phrase": "a blue box", "area": 612, "task": "where", "expected": "left", "cx": 0.158, "crops": {"left": 0.913797914981842, "center": 0.921362578868866, "right": 0.9648445248603821}, "words": {"left": 0.7577158212661743, "center": 0.10960306972265244, "right": 0.13268119096755981}}
+{"image": "020.png", "entity": "crate", "phrase": "a blue box", "area": 612, "task": "near", "expected": false, "p_yes": 0.5473662614822388, "p_lowres": 0.8800946474075317}
+{"image": "020.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3784981071949005}
+{"image": "021.png", "entity": "table", "phrase": "a brown box", "area": 12193, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9597809910774231}
+{"image": "021.png", "entity": "table", "phrase": "a brown box", "area": 12193, "task": "where", "expected": "left", "cx": 0.212, "crops": {"left": 0.9275215864181519, "center": 0.9201134443283081, "right": 0.38777679204940796}, "words": {"left": 0.8501177430152893, "center": 0.06633523851633072, "right": 0.08354701101779938}}
+{"image": "021.png", "entity": "table", "phrase": "a brown box", "area": 12193, "task": "near", "expected": true, "p_yes": 0.6812423467636108, "p_lowres": 0.8378053307533264}
+{"image": "021.png", "entity": "apple", "phrase": "a red ball", "area": 190, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9588481783866882}
+{"image": "021.png", "entity": "apple", "phrase": "a red ball", "area": 190, "task": "where", "expected": "left", "cx": 0.25, "crops": {"left": 0.978611946105957, "center": 0.6875960230827332, "right": 0.4346548914909363}, "words": {"left": 0.8208175897598267, "center": 0.046320874243974686, "right": 0.13286153972148895}}
+{"image": "021.png", "entity": "apple", "phrase": "a red ball", "area": 190, "task": "near", "expected": false, "p_yes": 0.6843279004096985, "p_lowres": 0.7339344620704651}
+{"image": "021.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8787640929222107}
+{"image": "021.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5414472222328186}
+{"image": "021.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 182, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9349573850631714}
+{"image": "021.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 182, "task": "where", "expected": "center", "cx": 0.627, "crops": {"left": 0.5123966932296753, "center": 0.9435375332832336, "right": 0.8919954299926758}, "words": {"left": 0.4282623529434204, "center": 0.13308513164520264, "right": 0.43865251541137695}}
+{"image": "021.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 182, "task": "near", "expected": false, "p_yes": 0.49516838788986206, "p_lowres": 0.8980154395103455}
+{"image": "021.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5827345252037048}
+{"image": "022.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2725396752357483}
+{"image": "022.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.38380861282348633}
+{"image": "022.png", "entity": "crate", "phrase": "a blue box", "area": 1802, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8039247393608093}
+{"image": "022.png", "entity": "crate", "phrase": "a blue box", "area": 1802, "task": "where", "expected": "right", "cx": 0.916, "crops": {"left": 0.7499974370002747, "center": 0.7701722383499146, "right": 0.9124405384063721}, "words": {"left": 0.4295748174190521, "center": 0.11250373721122742, "right": 0.45792150497436523}}
+{"image": "022.png", "entity": "crate", "phrase": "a blue box", "area": 1802, "task": "near", "expected": false, "p_yes": 0.4585835635662079, "p_lowres": 0.9382063150405884}
+{"image": "022.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3744841516017914}
+{"image": "022.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 828, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8492828011512756}
+{"image": "022.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 828, "task": "where", "expected": "left", "cx": 0.152, "crops": {"left": 0.9379567503929138, "center": 0.45163068175315857, "right": 0.5509763956069946}, "words": {"left": 0.8198860883712769, "center": 0.04221150279045105, "right": 0.1379023790359497}}
+{"image": "022.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 828, "task": "near", "expected": false, "p_yes": 0.5136975646018982, "p_lowres": 0.9142759442329407}
+{"image": "022.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.25305798649787903}
+{"image": "023.png", "entity": "table", "phrase": "a brown box", "area": 1715, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8007796406745911}
+{"image": "023.png", "entity": "table", "phrase": "a brown box", "area": 1715, "task": "where", "expected": "left", "cx": 0.075, "crops": {"left": 0.9546831250190735, "center": 0.2695039212703705, "right": 0.3714006543159485}, "words": {"left": 0.6430348753929138, "center": 0.13292649388313293, "right": 0.22403864562511444}}
+{"image": "023.png", "entity": "table", "phrase": "a brown box", "area": 1715, "task": "near", "expected": false, "p_yes": 0.3806654214859009, "p_lowres": 0.8227035403251648}
+{"image": "023.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8758407235145569}
+{"image": "023.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5885496735572815}
+{"image": "023.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 234, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9014882445335388}
+{"image": "023.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 234, "task": "where", "expected": "center", "cx": 0.573, "crops": {"left": 0.6636409163475037, "center": 0.8670341968536377, "right": 0.9013180136680603}, "words": {"left": 0.44854530692100525, "center": 0.17328687012195587, "right": 0.37816786766052246}}
+{"image": "023.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 234, "task": "near", "expected": false, "p_yes": 0.46759575605392456, "p_lowres": 0.858454167842865}
+{"image": "023.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.6010169982910156}
+{"image": "024.png", "entity": "table", "phrase": "a brown box", "area": 1250, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9652503132820129}
+{"image": "024.png", "entity": "table", "phrase": "a brown box", "area": 1250, "task": "near", "expected": false, "p_yes": 0.5499545931816101, "p_lowres": 0.9401408433914185}
+{"image": "024.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.984716534614563}
+{"image": "024.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9814557433128357}
+{"image": "024.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7787104249000549}
+{"image": "024.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 380, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.5328609943389893}
+{"image": "024.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 380, "task": "where", "expected": "left", "cx": 0.258, "crops": {"left": 0.4170127213001251, "center": 0.7969312071800232, "right": 0.6762842535972595}, "words": {"left": 0.533850371837616, "center": 0.10783986747264862, "right": 0.3583097457885742}}
+{"image": "024.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 380, "task": "near", "expected": false, "p_yes": 0.3219469487667084, "p_lowres": 0.6742302179336548}
+{"image": "025.png", "entity": "table", "phrase": "a brown box", "area": 1352, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9410771131515503}
+{"image": "025.png", "entity": "table", "phrase": "a brown box", "area": 1352, "task": "where", "expected": "center", "cx": 0.38, "crops": {"left": 0.9770421981811523, "center": 0.9788073301315308, "right": 0.49529901146888733}, "words": {"left": 0.7796190977096558, "center": 0.09746990352869034, "right": 0.12291095405817032}}
+{"image": "025.png", "entity": "table", "phrase": "a brown box", "area": 1352, "task": "near", "expected": false, "p_yes": 0.6383264064788818, "p_lowres": 0.9003664255142212}
+{"image": "025.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9360290169715881}
+{"image": "025.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5588269233703613}
+{"image": "025.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 336, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9199665188789368}
+{"image": "025.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 336, "task": "where", "expected": "right", "cx": 0.858, "crops": {"left": 0.876306414604187, "center": 0.5999439358711243, "right": 0.9255087971687317}, "words": {"left": 0.44991129636764526, "center": 0.14351066946983337, "right": 0.40657806396484375}}
+{"image": "025.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 336, "task": "near", "expected": false, "p_yes": 0.46396270394325256, "p_lowres": 0.9472823739051819}
+{"image": "026.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.37097635865211487}
+{"image": "026.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4379258453845978}
+{"image": "026.png", "entity": "crate", "phrase": "a blue box", "area": 532, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8836029171943665}
+{"image": "026.png", "entity": "crate", "phrase": "a blue box", "area": 532, "task": "where", "expected": "right", "cx": 0.748, "crops": {"left": 0.7822189927101135, "center": 0.936259925365448, "right": 0.934109628200531}, "words": {"left": 0.6303332448005676, "center": 0.1301150768995285, "right": 0.2395516335964203}}
+{"image": "026.png", "entity": "crate", "phrase": "a blue box", "area": 532, "task": "near", "expected": false, "p_yes": 0.5749499797821045, "p_lowres": 0.8585394024848938}
+{"image": "026.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.44944313168525696}
+{"image": "026.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 4176, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9362500905990601}
+{"image": "026.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 4176, "task": "where", "expected": "right", "cx": 0.908, "crops": {"left": 0.471697598695755, "center": 0.6713325381278992, "right": 0.9192362427711487}, "words": {"left": 0.4425344467163086, "center": 0.1135692447423935, "right": 0.4438963234424591}}
+{"image": "026.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 4176, "task": "near", "expected": true, "p_yes": 0.6346724629402161, "p_lowres": 0.9167600870132446}
+{"image": "026.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.28479117155075073}
+{"image": "027.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.46880534291267395}
+{"image": "027.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4098420739173889}
+{"image": "027.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8762797713279724}
+{"image": "027.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9883574843406677}
+{"image": "027.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.48978710174560547}
+{"image": "027.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 1406, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.34092605113983154}
+{"image": "027.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 1406, "task": "near", "expected": false, "p_yes": 0.2516961991786957, "p_lowres": 0.5795561671257019}
+{"image": "028.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3473472595214844}
+{"image": "028.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3381637632846832}
+{"image": "028.png", "entity": "crate", "phrase": "a blue box", "area": 3588, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9359291195869446}
+{"image": "028.png", "entity": "crate", "phrase": "a blue box", "area": 3588, "task": "where", "expected": "left", "cx": 0.07, "crops": {"left": 0.8443862199783325, "center": 0.8755694031715393, "right": 0.9330571889877319}, "words": {"left": 0.7226864695549011, "center": 0.13420677185058594, "right": 0.14310672879219055}}
+{"image": "028.png", "entity": "crate", "phrase": "a blue box", "area": 3588, "task": "near", "expected": true, "p_yes": 0.5198017358779907, "p_lowres": 0.8814237117767334}
+{"image": "028.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.42122721672058105}
+{"image": "029.png", "entity": "table", "phrase": "a brown box", "area": 1711, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9683863520622253}
+{"image": "029.png", "entity": "table", "phrase": "a brown box", "area": 1711, "task": "where", "expected": "center", "cx": 0.534, "crops": {"left": 0.5667188167572021, "center": 0.961840033531189, "right": 0.9164354801177979}, "words": {"left": 0.625943124294281, "center": 0.18244078755378723, "right": 0.19161613285541534}}
+{"image": "029.png", "entity": "table", "phrase": "a brown box", "area": 1711, "task": "near", "expected": false, "p_yes": 0.6371405720710754, "p_lowres": 0.8144710659980774}
+{"image": "029.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9572086334228516}
+{"image": "029.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4902971088886261}
+{"image": "029.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5939423441886902}
+{"image": "029.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5292704701423645}
+{"image": "030.png", "entity": "table", "phrase": "a brown box", "area": 945, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8957763910293579}
+{"image": "030.png", "entity": "table", "phrase": "a brown box", "area": 945, "task": "where", "expected": "center", "cx": 0.569, "crops": {"left": 0.4393165111541748, "center": 0.9909056425094604, "right": 0.8761206269264221}, "words": {"left": 0.6073063015937805, "center": 0.14373651146888733, "right": 0.24895721673965454}}
+{"image": "030.png", "entity": "table", "phrase": "a brown box", "area": 945, "task": "near", "expected": false, "p_yes": 0.42003121972084045, "p_lowres": 0.8317498564720154}
+{"image": "030.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9671998023986816}
+{"image": "030.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9816212058067322}
+{"image": "030.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 361, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.6232183575630188}
+{"image": "030.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 361, "task": "where", "expected": "center", "cx": 0.481, "crops": {"left": 0.2721707224845886, "center": 0.7286830544471741, "right": 0.6780001521110535}, "words": {"left": 0.5577906966209412, "center": 0.12072185426950455, "right": 0.3214874267578125}}
+{"image": "030.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 361, "task": "near", "expected": false, "p_yes": 0.28170305490493774, "p_lowres": 0.6310024857521057}
+{"image": "031.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4238021671772003}
+{"image": "031.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4291401207447052}
+{"image": "031.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8241809606552124}
+{"image": "031.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.36013516783714294}
+{"image": "031.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4139471650123596}
+{"image": "031.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3361373841762543}
+{"image": "032.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.266813725233078}
+{"image": "032.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.32602494955062866}
+{"image": "032.png", "entity": "crate", "phrase": "a blue box", "area": 1200, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9006614685058594}
+{"image": "032.png", "entity": "crate", "phrase": "a blue box", "area": 1200, "task": "where", "expected": "left", "cx": 0.189, "crops": {"left": 0.9542243480682373, "center": 0.7732979655265808, "right": 0.8454167246818542}, "words": {"left": 0.6059324145317078, "center": 0.14082998037338257, "right": 0.25323760509490967}}
+{"image": "032.png", "entity": "crate", "phrase": "a blue box", "area": 1200, "task": "near", "expected": false, "p_yes": 0.529356062412262, "p_lowres": 0.8421535491943359}
+{"image": "032.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3072110414505005}
+{"image": "032.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3053395748138428}
+{"image": "032.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.19848257303237915}
+{"image": "033.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4538309574127197}
+{"image": "033.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.36054620146751404}
+{"image": "033.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8727276921272278}
+{"image": "033.png", "entity": "toy", "phrase": "a yellow ball", "area": 380, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9536278247833252}
+{"image": "033.png", "entity": "toy", "phrase": "a yellow ball", "area": 380, "task": "where", "expected": "left", "cx": 0.289, "crops": {"left": 0.9892951846122742, "center": 0.9290730357170105, "right": 0.978721022605896}, "words": {"left": 0.5945221185684204, "center": 0.12115620076656342, "right": 0.2843216359615326}}
+{"image": "033.png", "entity": "toy", "phrase": "a yellow ball", "area": 380, "task": "near", "expected": false, "p_yes": 0.560515284538269, "p_lowres": 0.8432939052581787}
+{"image": "033.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.44844138622283936}
+{"image": "033.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 225, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.3387514054775238}
+{"image": "033.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 225, "task": "near", "expected": false, "p_yes": 0.2364910989999771, "p_lowres": 0.512024462223053}
+{"image": "034.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3842814862728119}
+{"image": "034.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.371891051530838}
+{"image": "034.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8249194025993347}
+{"image": "034.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.332889586687088}
+{"image": "034.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.39420321583747864}
+{"image": "034.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2816753089427948}
+{"image": "035.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.26785415410995483}
+{"image": "035.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.25384870171546936}
+{"image": "035.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7757657766342163}
+{"image": "035.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9828394055366516}
+{"image": "035.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.21808987855911255}
+{"image": "035.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 676, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.25559180974960327}
+{"image": "035.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 676, "task": "near", "expected": false, "p_yes": 0.2020348459482193, "p_lowres": 0.5450511574745178}
+{"image": "036.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3310166597366333}
+{"image": "036.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.33684173226356506}
+{"image": "036.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7170969843864441}
+{"image": "036.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.33540526032447815}
+{"image": "036.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 4698, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.892776370048523}
+{"image": "036.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 4698, "task": "where", "expected": "left", "cx": 0.083, "crops": {"left": 0.8488773107528687, "center": 0.31565603613853455, "right": 0.47990208864212036}, "words": {"left": 0.7135009765625, "center": 0.07961390167474747, "right": 0.20688515901565552}}
+{"image": "036.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 4698, "task": "near", "expected": true, "p_yes": 0.4842414855957031, "p_lowres": 0.8786449432373047}
+{"image": "036.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2562735676765442}
+{"image": "037.png", "entity": "table", "phrase": "a brown box", "area": 13700, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9490082859992981}
+{"image": "037.png", "entity": "table", "phrase": "a brown box", "area": 13700, "task": "where", "expected": "center", "cx": 0.572, "crops": {"left": 0.8825973868370056, "center": 0.9309526085853577, "right": 0.9586633443832397}, "words": {"left": 0.5505567789077759, "center": 0.1513357013463974, "right": 0.2981075346469879}}
+{"image": "037.png", "entity": "table", "phrase": "a brown box", "area": 13700, "task": "near", "expected": true, "p_yes": 0.6587606072425842, "p_lowres": 0.8378771543502808}
+{"image": "037.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8688234686851501}
+{"image": "037.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.514474630355835}
+{"image": "037.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3483814299106598}
+{"image": "037.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5897445678710938}
+{"image": "038.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2908537685871124}
+{"image": "038.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3254707157611847}
+{"image": "038.png", "entity": "crate", "phrase": "a blue box", "area": 504, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8313736319541931}
+{"image": "038.png", "entity": "crate", "phrase": "a blue box", "area": 504, "task": "where", "expected": "center", "cx": 0.398, "crops": {"left": 0.7909226417541504, "center": 0.9078069925308228, "right": 0.861997663974762}, "words": {"left": 0.5487918257713318, "center": 0.14420229196548462, "right": 0.30700579285621643}}
+{"image": "038.png", "entity": "crate", "phrase": "a blue box", "area": 504, "task": "near", "expected": false, "p_yes": 0.44468721747398376, "p_lowres": 0.842147707939148}
+{"image": "038.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3065132796764374}
+{"image": "038.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.31492555141448975}
+{"image": "038.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.17795172333717346}
+{"image": "039.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.47314468026161194}
+{"image": "039.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4401223659515381}
+{"image": "039.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3996852934360504}
+{"image": "039.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.48404666781425476}
+{"image": "039.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3412625789642334}
+{"image": "040.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3950033485889435}
+{"image": "040.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4605826735496521}
+{"image": "040.png", "entity": "crate", "phrase": "a blue box", "area": 851, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8316037058830261}
+{"image": "040.png", "entity": "crate", "phrase": "a blue box", "area": 851, "task": "near", "expected": false, "p_yes": 0.49477073550224304, "p_lowres": 0.8826026916503906}
+{"image": "040.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.47805288434028625}
+{"image": "040.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 208, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.6829389333724976}
+{"image": "040.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 208, "task": "where", "expected": "left", "cx": 0.011, "crops": {"left": 0.8560665249824524, "center": 0.393148809671402, "right": 0.5905486345291138}, "words": {"left": 0.6439700722694397, "center": 0.10111626237630844, "right": 0.25491368770599365}}
+{"image": "040.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 208, "task": "near", "expected": false, "p_yes": 0.37193962931632996, "p_lowres": 0.7483742237091064}
+{"image": "040.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2999744117259979}
+{"image": "041.png", "entity": "table", "phrase": "a brown box", "area": 2812, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9875062704086304}
+{"image": "041.png", "entity": "table", "phrase": "a brown box", "area": 2812, "task": "near", "expected": false, "p_yes": 0.6841214299201965, "p_lowres": 0.8861768841743469}
+{"image": "041.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8467420935630798}
+{"image": "041.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.46749505400657654}
+{"image": "041.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 442, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9368364810943604}
+{"image": "041.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 442, "task": "where", "expected": "right", "cx": 0.892, "crops": {"left": 0.6144757866859436, "center": 0.6311108469963074, "right": 0.8751909136772156}, "words": {"left": 0.46658560633659363, "center": 0.11855440586805344, "right": 0.4148600399494171}}
+{"image": "041.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 442, "task": "near", "expected": false, "p_yes": 0.4064100384712219, "p_lowres": 0.9461149573326111}
+{"image": "041.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4515593945980072}
+{"image": "042.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.49296140670776367}
+{"image": "042.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3947312831878662}
+{"image": "042.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8688998222351074}
+{"image": "042.png", "entity": "toy", "phrase": "a yellow ball", "area": 506, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9841793179512024}
+{"image": "042.png", "entity": "toy", "phrase": "a yellow ball", "area": 506, "task": "where", "expected": "right", "cx": 0.753, "crops": {"left": 0.3673735558986664, "center": 0.8353480100631714, "right": 0.9839040040969849}, "words": {"left": 0.47292813658714294, "center": 0.1721711903810501, "right": 0.35490062832832336}}
+{"image": "042.png", "entity": "toy", "phrase": "a yellow ball", "area": 506, "task": "near", "expected": false, "p_yes": 0.6088488698005676, "p_lowres": 0.9249588251113892}
+{"image": "042.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5693467259407043}
+{"image": "042.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.36031582951545715}
+{"image": "043.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3172246217727661}
+{"image": "043.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.36542925238609314}
+{"image": "043.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7489864826202393}
+{"image": "043.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3730916678905487}
+{"image": "043.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 550, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8670986294746399}
+{"image": "043.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 550, "task": "where", "expected": "left", "cx": 0.225, "crops": {"left": 0.9646762013435364, "center": 0.4833049476146698, "right": 0.5790243148803711}, "words": {"left": 0.6384211182594299, "center": 0.12008053809404373, "right": 0.24149833619594574}}
+{"image": "043.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 550, "task": "near", "expected": false, "p_yes": 0.4728436768054962, "p_lowres": 0.8379240036010742}
+{"image": "043.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.27000701427459717}
+{"image": "044.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.35111546516418457}
+{"image": "044.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.38091903924942017}
+{"image": "044.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8593655228614807}
+{"image": "044.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.31565356254577637}
+{"image": "044.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 225, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.33360710740089417}
+{"image": "044.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 225, "task": "where", "expected": "center", "cx": 0.541, "crops": {"left": 0.5628040432929993, "center": 0.5258386731147766, "right": 0.6228433847427368}, "words": {"left": 0.5480345487594604, "center": 0.10009294003248215, "right": 0.3518724739551544}}
+{"image": "044.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 225, "task": "near", "expected": false, "p_yes": 0.27465716004371643, "p_lowres": 0.6160154342651367}
+{"image": "045.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4044114053249359}
+{"image": "045.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3941686153411865}
+{"image": "045.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8071662783622742}
+{"image": "045.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3489302098751068}
+{"image": "045.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4490717351436615}
+{"image": "045.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.30513328313827515}
+{"image": "046.png", "entity": "table", "phrase": "a brown box", "area": 6027, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8349335193634033}
+{"image": "046.png", "entity": "table", "phrase": "a brown box", "area": 6027, "task": "where", "expected": "right", "cx": 0.922, "crops": {"left": 0.3877115845680237, "center": 0.3194177746772766, "right": 0.9492954611778259}, "words": {"left": 0.5584496259689331, "center": 0.08976831287145615, "right": 0.35178208351135254}}
+{"image": "046.png", "entity": "table", "phrase": "a brown box", "area": 6027, "task": "near", "expected": true, "p_yes": 0.5184590220451355, "p_lowres": 0.6362255215644836}
+{"image": "046.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.41852378845214844}
+{"image": "046.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8904824256896973}
+{"image": "046.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3928025960922241}
+{"image": "046.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5853280425071716}
+{"image": "046.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3375084102153778}
+{"image": "047.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.20498116314411163}
+{"image": "047.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.24517959356307983}
+{"image": "047.png", "entity": "crate", "phrase": "a blue box", "area": 1344, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9198523163795471}
+{"image": "047.png", "entity": "crate", "phrase": "a blue box", "area": 1344, "task": "where", "expected": "center", "cx": 0.595, "crops": {"left": 0.7871547341346741, "center": 0.9507826566696167, "right": 0.8032563924789429}, "words": {"left": 0.5558029413223267, "center": 0.14054347574710846, "right": 0.3036535382270813}}
+{"image": "047.png", "entity": "crate", "phrase": "a blue box", "area": 1344, "task": "near", "expected": false, "p_yes": 0.5517275333404541, "p_lowres": 0.8325663208961487}
+{"image": "047.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.23569440841674805}
+{"image": "047.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.22985310852527618}
+{"image": "047.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.14007733762264252}
+{"image": "048.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.48260870575904846}
+{"image": "048.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4591684937477112}
+{"image": "048.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8420650362968445}
+{"image": "048.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.42206722497940063}
+{"image": "048.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.48087242245674133}
+{"image": "048.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3822639584541321}
+{"image": "049.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.44973477721214294}
+{"image": "049.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4632265865802765}
+{"image": "049.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8315909504890442}
+{"image": "049.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3937319219112396}
+{"image": "049.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4582933187484741}
+{"image": "049.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3601149320602417}
+{"image": "050.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.18098540604114532}
+{"image": "050.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.23827728629112244}
+{"image": "050.png", "entity": "crate", "phrase": "a blue box", "area": 2736, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.7448945045471191}
+{"image": "050.png", "entity": "crate", "phrase": "a blue box", "area": 2736, "task": "where", "expected": "right", "cx": 0.909, "crops": {"left": 0.6709970831871033, "center": 0.6592487692832947, "right": 0.8665384650230408}, "words": {"left": 0.3448665738105774, "center": 0.11038082093000412, "right": 0.5447526574134827}}
+{"image": "050.png", "entity": "crate", "phrase": "a blue box", "area": 2736, "task": "near", "expected": false, "p_yes": 0.44333773851394653, "p_lowres": 0.9057787656784058}
+{"image": "050.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.24153132736682892}
+{"image": "050.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 408, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.7753101587295532}
+{"image": "050.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 408, "task": "where", "expected": "left", "cx": 0.273, "crops": {"left": 0.8715152740478516, "center": 0.7395980358123779, "right": 0.27785247564315796}, "words": {"left": 0.7285218834877014, "center": 0.06706490367650986, "right": 0.20441323518753052}}
+{"image": "050.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 408, "task": "near", "expected": false, "p_yes": 0.3952253758907318, "p_lowres": 0.8564342260360718}
+{"image": "050.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.15290696918964386}
+{"image": "051.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.36241456866264343}
+{"image": "051.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.37119626998901367}
+{"image": "051.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8347952365875244}
+{"image": "051.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2620484232902527}
+{"image": "051.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3466522693634033}
+{"image": "051.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.26081210374832153}
+{"image": "052.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.24825964868068695}
+{"image": "052.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2857140004634857}
+{"image": "052.png", "entity": "crate", "phrase": "a blue box", "area": 805, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9305635690689087}
+{"image": "052.png", "entity": "crate", "phrase": "a blue box", "area": 805, "task": "near", "expected": false, "p_yes": 0.5256104469299316, "p_lowres": 0.8115205764770508}
+{"image": "052.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.265289306640625}
+{"image": "052.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.28455114364624023}
+{"image": "052.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.16697074472904205}
+{"image": "053.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.1457710713148117}
+{"image": "053.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.15870410203933716}
+{"image": "053.png", "entity": "crate", "phrase": "a blue box", "area": 1260, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.6424517631530762}
+{"image": "053.png", "entity": "crate", "phrase": "a blue box", "area": 1260, "task": "where", "expected": "left", "cx": 0.269, "crops": {"left": 0.8889009356498718, "center": 0.8348329067230225, "right": 0.7944509983062744}, "words": {"left": 0.5530393123626709, "center": 0.11261700093746185, "right": 0.33434367179870605}}
+{"image": "053.png", "entity": "crate", "phrase": "a blue box", "area": 1260, "task": "near", "expected": false, "p_yes": 0.4220542311668396, "p_lowres": 0.8567837476730347}
+{"image": "053.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.17573940753936768}
+{"image": "053.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.17116209864616394}
+{"image": "053.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.08435991406440735}
+{"image": "054.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.28009647130966187}
+{"image": "054.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3768318295478821}
+{"image": "054.png", "entity": "crate", "phrase": "a blue box", "area": 17018, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9189378023147583}
+{"image": "054.png", "entity": "crate", "phrase": "a blue box", "area": 17018, "task": "where", "expected": "left", "cx": 0.208, "crops": {"left": 0.9186843633651733, "center": 0.910692572593689, "right": 0.7428591847419739}, "words": {"left": 0.6798113584518433, "center": 0.12315469980239868, "right": 0.19703391194343567}}
+{"image": "054.png", "entity": "crate", "phrase": "a blue box", "area": 17018, "task": "near", "expected": true, "p_yes": 0.644099235534668, "p_lowres": 0.8624438047409058}
+{"image": "054.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.37906044721603394}
+{"image": "054.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 272, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9163414239883423}
+{"image": "054.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 272, "task": "near", "expected": false, "p_yes": 0.562438428401947, "p_lowres": 0.9204849004745483}
+{"image": "054.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.23063704371452332}
+{"image": "055.png", "entity": "table", "phrase": "a brown box", "area": 1950, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.4952794909477234}
+{"image": "055.png", "entity": "table", "phrase": "a brown box", "area": 1950, "task": "where", "expected": "left", "cx": 0.019, "crops": {"left": 0.7905094623565674, "center": 0.3674440383911133, "right": 0.42421865463256836}, "words": {"left": 0.6401333212852478, "center": 0.10833055526018143, "right": 0.25153616070747375}}
+{"image": "055.png", "entity": "table", "phrase": "a brown box", "area": 1950, "task": "near", "expected": true, "p_yes": 0.2451774775981903, "p_lowres": 0.7583739757537842}
+{"image": "055.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2928756773471832}
+{"image": "055.png", "entity": "crate", "phrase": "a blue box", "area": 405, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9399431347846985}
+{"image": "055.png", "entity": "crate", "phrase": "a blue box", "area": 405, "task": "where", "expected": "left", "cx": 0.194, "crops": {"left": 0.8692290782928467, "center": 0.8609994053840637, "right": 0.8606509566307068}, "words": {"left": 0.6614923477172852, "center": 0.1308155208826065, "right": 0.20769214630126953}}
+{"image": "055.png", "entity": "crate", "phrase": "a blue box", "area": 405, "task": "near", "expected": false, "p_yes": 0.48894965648651123, "p_lowres": 0.9171813130378723}
+{"image": "055.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4270704388618469}
+{"image": "055.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 182, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.37392091751098633}
+{"image": "055.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 182, "task": "near", "expected": false, "p_yes": 0.26095739006996155, "p_lowres": 0.6083678007125854}
+{"image": "056.png", "entity": "table", "phrase": "a brown box", "area": 8460, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9218770265579224}
+{"image": "056.png", "entity": "table", "phrase": "a brown box", "area": 8460, "task": "where", "expected": "right", "cx": 0.928, "crops": {"left": 0.3921240568161011, "center": 0.3006473183631897, "right": 0.9552958011627197}, "words": {"left": 0.581892192363739, "center": 0.08158936351537704, "right": 0.33651846647262573}}
+{"image": "056.png", "entity": "table", "phrase": "a brown box", "area": 8460, "task": "near", "expected": true, "p_yes": 0.6371943950653076, "p_lowres": 0.8030090928077698}
+{"image": "056.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4965730309486389}
+{"image": "056.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9257180690765381}
+{"image": "056.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.474031001329422}
+{"image": "056.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.6419718861579895}
+{"image": "056.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.43555450439453125}
+{"image": "057.png", "entity": "table", "phrase": "a brown box", "area": 2765, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9536794424057007}
+{"image": "057.png", "entity": "table", "phrase": "a brown box", "area": 2765, "task": "where", "expected": "left", "cx": 0.272, "crops": {"left": 0.9550270438194275, "center": 0.9333775043487549, "right": 0.4474324584007263}, "words": {"left": 0.6674710512161255, "center": 0.13236038386821747, "right": 0.20016857981681824}}
+{"image": "057.png", "entity": "table", "phrase": "a brown box", "area": 2765, "task": "near", "expected": false, "p_yes": 0.608651340007782, "p_lowres": 0.8704419732093811}
+{"image": "057.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9245752096176147}
+{"image": "057.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.48989859223365784}
+{"image": "057.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4183617830276489}
+{"image": "057.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5035971999168396}
+{"image": "058.png", "entity": "table", "phrase": "a brown box", "area": 814, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.7432477474212646}
+{"image": "058.png", "entity": "table", "phrase": "a brown box", "area": 814, "task": "where", "expected": "left", "cx": 0.033, "crops": {"left": 0.8868117928504944, "center": 0.20932915806770325, "right": 0.3972536325454712}, "words": {"left": 0.6523678302764893, "center": 0.12417147308588028, "right": 0.22346068918704987}}
+{"image": "058.png", "entity": "table", "phrase": "a brown box", "area": 814, "task": "near", "expected": false, "p_yes": 0.33243611454963684, "p_lowres": 0.6379295587539673}
+{"image": "058.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.30813291668891907}
+{"image": "058.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8252923488616943}
+{"image": "058.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.35882991552352905}
+{"image": "058.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 936, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8459511399269104}
+{"image": "058.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 936, "task": "near", "expected": false, "p_yes": 0.4669319987297058, "p_lowres": 0.8759704828262329}
+{"image": "058.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2210451364517212}
+{"image": "059.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4500841498374939}
+{"image": "059.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4025150239467621}
+{"image": "059.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8524281978607178}
+{"image": "059.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.37386777997016907}
+{"image": "059.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.47760847210884094}
+{"image": "059.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.31516098976135254}
+{"image": "060.png", "entity": "table", "phrase": "a brown box", "area": 1645, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9488624334335327}
+{"image": "060.png", "entity": "table", "phrase": "a brown box", "area": 1645, "task": "near", "expected": false, "p_yes": 0.5327295064926147, "p_lowres": 0.9218533039093018}
+{"image": "060.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9846575856208801}
+{"image": "060.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7165929079055786}
+{"image": "061.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.42074650526046753}
+{"image": "061.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4889024496078491}
+{"image": "061.png", "entity": "crate", "phrase": "a blue box", "area": 64800, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8204469084739685}
+{"image": "061.png", "entity": "crate", "phrase": "a blue box", "area": 64800, "task": "where", "expected": "center", "cx": 0.577, "crops": {"left": 0.8564670085906982, "center": 0.8615076541900635, "right": 0.8502052426338196}, "words": {"left": 0.6056963205337524, "center": 0.11225346475839615, "right": 0.282050222158432}}
+{"image": "061.png", "entity": "crate", "phrase": "a blue box", "area": 64800, "task": "near", "expected": true, "p_yes": 0.7003411054611206, "p_lowres": 0.760919988155365}
+{"image": "061.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4835831820964813}
+{"image": "061.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5446622967720032}
+{"image": "061.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.45380356907844543}
+{"image": "062.png", "entity": "table", "phrase": "a brown box", "area": 1984, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.938035249710083}
+{"image": "062.png", "entity": "table", "phrase": "a brown box", "area": 1984, "task": "where", "expected": "right", "cx": 0.95, "crops": {"left": 0.5242105722427368, "center": 0.503483235836029, "right": 0.8998842239379883}, "words": {"left": 0.5143287181854248, "center": 0.11450839787721634, "right": 0.37116292119026184}}
+{"image": "062.png", "entity": "table", "phrase": "a brown box", "area": 1984, "task": "near", "expected": true, "p_yes": 0.5931955575942993, "p_lowres": 0.8089693188667297}
+{"image": "062.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.34724435210227966}
+{"image": "062.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9262362718582153}
+{"image": "062.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5488071441650391}
+{"image": "063.png", "entity": "table", "phrase": "a brown box", "area": 3477, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8068074584007263}
+{"image": "063.png", "entity": "table", "phrase": "a brown box", "area": 3477, "task": "where", "expected": "left", "cx": 0.094, "crops": {"left": 0.9460050463676453, "center": 0.3883751332759857, "right": 0.4071980118751526}, "words": {"left": 0.7309082746505737, "center": 0.09980175644159317, "right": 0.1692899465560913}}
+{"image": "063.png", "entity": "table", "phrase": "a brown box", "area": 3477, "task": "near", "expected": false, "p_yes": 0.49054259061813354, "p_lowres": 0.8220839500427246}
+{"image": "063.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9088902473449707}
+{"image": "063.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5913195610046387}
+{"image": "063.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 320, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9181931614875793}
+{"image": "063.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 320, "task": "near", "expected": false, "p_yes": 0.5295166373252869, "p_lowres": 0.854195237159729}
+{"image": "063.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5322717428207397}
+{"image": "064.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3252333402633667}
+{"image": "064.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3504226803779602}
+{"image": "064.png", "entity": "crate", "phrase": "a blue box", "area": 403, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.7029356956481934}
+{"image": "064.png", "entity": "crate", "phrase": "a blue box", "area": 403, "task": "where", "expected": "right", "cx": 0.978, "crops": {"left": 0.8253214955329895, "center": 0.690943717956543, "right": 0.9074195027351379}, "words": {"left": 0.5460259914398193, "center": 0.13641709089279175, "right": 0.3175569176673889}}
+{"image": "064.png", "entity": "crate", "phrase": "a blue box", "area": 403, "task": "near", "expected": false, "p_yes": 0.4270704388618469, "p_lowres": 0.8437352180480957}
+{"image": "064.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3659083843231201}
+{"image": "064.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 475, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8247705698013306}
+{"image": "064.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 475, "task": "near", "expected": false, "p_yes": 0.4885921776294708, "p_lowres": 0.8945286870002747}
+{"image": "064.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2489536851644516}
+{"image": "065.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.426011860370636}
+{"image": "065.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.38144320249557495}
+{"image": "065.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8141223788261414}
+{"image": "065.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.36073797941207886}
+{"image": "065.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4365723133087158}
+{"image": "065.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.31282126903533936}
+{"image": "066.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3752283453941345}
+{"image": "066.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.37911972403526306}
+{"image": "066.png", "entity": "crate", "phrase": "a blue box", "area": 310, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8215672969818115}
+{"image": "066.png", "entity": "crate", "phrase": "a blue box", "area": 310, "task": "where", "expected": "left", "cx": 0.014, "crops": {"left": 0.8374153971672058, "center": 0.7994343638420105, "right": 0.8987292051315308}, "words": {"left": 0.6474383473396301, "center": 0.0963967964053154, "right": 0.25616487860679626}}
+{"image": "066.png", "entity": "crate", "phrase": "a blue box", "area": 310, "task": "near", "expected": false, "p_yes": 0.4657576382160187, "p_lowres": 0.7840272188186646}
+{"image": "066.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3746691346168518}
+{"image": "066.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.43568578362464905}
+{"image": "066.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2938340902328491}
+{"image": "067.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3634778559207916}
+{"image": "067.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.38712090253829956}
+{"image": "067.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8634504675865173}
+{"image": "067.png", "entity": "toy", "phrase": "a yellow ball", "area": 169, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9747884273529053}
+{"image": "067.png", "entity": "toy", "phrase": "a yellow ball", "area": 169, "task": "where", "expected": "right", "cx": 0.744, "crops": {"left": 0.3482831120491028, "center": 0.391274631023407, "right": 0.9827703237533569}, "words": {"left": 0.4884234368801117, "center": 0.13695214688777924, "right": 0.37462443113327026}}
+{"image": "067.png", "entity": "toy", "phrase": "a yellow ball", "area": 169, "task": "near", "expected": false, "p_yes": 0.577862024307251, "p_lowres": 0.8677752614021301}
+{"image": "067.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5847200155258179}
+{"image": "067.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3612162172794342}
+{"image": "068.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.42337653040885925}
+{"image": "068.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.32725077867507935}
+{"image": "068.png", "entity": "crate", "phrase": "a blue box", "area": 520, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9378494024276733}
+{"image": "068.png", "entity": "crate", "phrase": "a blue box", "area": 520, "task": "where", "expected": "left", "cx": 0.23, "crops": {"left": 0.9318643808364868, "center": 0.7344458699226379, "right": 0.8877936005592346}, "words": {"left": 0.6522183418273926, "center": 0.10805705934762955, "right": 0.23972457647323608}}
+{"image": "068.png", "entity": "crate", "phrase": "a blue box", "area": 520, "task": "near", "expected": false, "p_yes": 0.4540976583957672, "p_lowres": 0.9029161930084229}
+{"image": "068.png", "entity": "toy", "phrase": "a yellow ball", "area": 1368, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9882526993751526}
+{"image": "068.png", "entity": "toy", "phrase": "a yellow ball", "area": 1368, "task": "where", "expected": "center", "cx": 0.417, "crops": {"left": 0.9817236661911011, "center": 0.9784851670265198, "right": 0.4565868079662323}, "words": {"left": 0.5075011849403381, "center": 0.12365582585334778, "right": 0.3688429594039917}}
+{"image": "068.png", "entity": "toy", "phrase": "a yellow ball", "area": 1368, "task": "near", "expected": false, "p_yes": 0.685272753238678, "p_lowres": 0.8680710196495056}
+{"image": "068.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5753569006919861}
+{"image": "068.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2726970314979553}
+{"image": "069.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.356549471616745}
+{"image": "069.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3684287965297699}
+{"image": "069.png", "entity": "crate", "phrase": "a blue box", "area": 2907, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8693183064460754}
+{"image": "069.png", "entity": "crate", "phrase": "a blue box", "area": 2907, "task": "where", "expected": "left", "cx": 0.078, "crops": {"left": 0.9401714205741882, "center": 0.8839855194091797, "right": 0.7987401485443115}, "words": {"left": 0.652492880821228, "center": 0.10223861783742905, "right": 0.24526844918727875}}
+{"image": "069.png", "entity": "crate", "phrase": "a blue box", "area": 2907, "task": "near", "expected": false, "p_yes": 0.5949047803878784, "p_lowres": 0.8517176508903503}
+{"image": "069.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.377373069524765}
+{"image": "069.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3989885449409485}
+{"image": "069.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2528277039527893}
+{"image": "070.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.23018181324005127}
+{"image": "070.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.28430426120758057}
+{"image": "070.png", "entity": "crate", "phrase": "a blue box", "area": 2976, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9168410897254944}
+{"image": "070.png", "entity": "crate", "phrase": "a blue box", "area": 2976, "task": "near", "expected": false, "p_yes": 0.5830633640289307, "p_lowres": 0.8546478748321533}
+{"image": "070.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.25951871275901794}
+{"image": "070.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.21623384952545166}
+{"image": "070.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.17473295331001282}
+{"image": "071.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.33419421315193176}
+{"image": "071.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3576538562774658}
+{"image": "071.png", "entity": "crate", "phrase": "a blue box", "area": 4131, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9154887795448303}
+{"image": "071.png", "entity": "crate", "phrase": "a blue box", "area": 4131, "task": "where", "expected": "left", "cx": 0.078, "crops": {"left": 0.8895277976989746, "center": 0.8123343586921692, "right": 0.858639657497406}, "words": {"left": 0.6188933849334717, "center": 0.09236249327659607, "right": 0.28874415159225464}}
+{"image": "071.png", "entity": "crate", "phrase": "a blue box", "area": 4131, "task": "near", "expected": true, "p_yes": 0.6452975869178772, "p_lowres": 0.818304717540741}
+{"image": "071.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.33431729674339294}
+{"image": "071.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.368802547454834}
+{"image": "071.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2543042004108429}
+{"image": "072.png", "entity": "table", "phrase": "a brown box", "area": 6930, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9483314156532288}
+{"image": "072.png", "entity": "table", "phrase": "a brown box", "area": 6930, "task": "near", "expected": true, "p_yes": 0.6287088990211487, "p_lowres": 0.8519917726516724}
+{"image": "072.png", "entity": "apple", "phrase": "a red ball", "area": 165, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.932300329208374}
+{"image": "072.png", "entity": "apple", "phrase": "a red ball", "area": 165, "task": "near", "expected": false, "p_yes": 0.6170638203620911, "p_lowres": 0.8017694354057312}
+{"image": "072.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9033803343772888}
+{"image": "072.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4167947471141815}
+{"image": "072.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2665843367576599}
+{"image": "072.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.41903164982795715}
+{"image": "073.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3012576699256897}
+{"image": "073.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3027525246143341}
+{"image": "073.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8098631501197815}
+{"image": "073.png", "entity": "toy", "phrase": "a yellow ball", "area": 182, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9759806394577026}
+{"image": "073.png", "entity": "toy", "phrase": "a yellow ball", "area": 182, "task": "where", "expected": "center", "cx": 0.62, "crops": {"left": 0.38596847653388977, "center": 0.9798907041549683, "right": 0.9725004434585571}, "words": {"left": 0.425862193107605, "center": 0.1691831648349762, "right": 0.4049546718597412}}
+{"image": "073.png", "entity": "toy", "phrase": "a yellow ball", "area": 182, "task": "near", "expected": false, "p_yes": 0.5287491679191589, "p_lowres": 0.8248458504676819}
+{"image": "073.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.37250611186027527}
+{"image": "073.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.24981631338596344}
+{"image": "074.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4552227556705475}
+{"image": "074.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3884023427963257}
+{"image": "074.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8541554808616638}
+{"image": "074.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3278830647468567}
+{"image": "074.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.40572234988212585}
+{"image": "074.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.31555840373039246}
+{"image": "075.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2193126678466797}
+{"image": "075.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2363712638616562}
+{"image": "075.png", "entity": "crate", "phrase": "a blue box", "area": 468, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8280599117279053}
+{"image": "075.png", "entity": "crate", "phrase": "a blue box", "area": 468, "task": "where", "expected": "center", "cx": 0.47, "crops": {"left": 0.8430542945861816, "center": 0.9103578329086304, "right": 0.8281823992729187}, "words": {"left": 0.513120710849762, "center": 0.15097250044345856, "right": 0.3359068036079407}}
+{"image": "075.png", "entity": "crate", "phrase": "a blue box", "area": 468, "task": "near", "expected": false, "p_yes": 0.4649125039577484, "p_lowres": 0.7999629378318787}
+{"image": "075.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.22788555920124054}
+{"image": "075.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.24358198046684265}
+{"image": "075.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.1201782077550888}
+{"image": "076.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3964633047580719}
+{"image": "076.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4260258674621582}
+{"image": "076.png", "entity": "crate", "phrase": "a blue box", "area": 27797, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8787707686424255}
+{"image": "076.png", "entity": "crate", "phrase": "a blue box", "area": 27797, "task": "where", "expected": "right", "cx": 0.791, "crops": {"left": 0.8962559700012207, "center": 0.9249563813209534, "right": 0.8687773942947388}, "words": {"left": 0.4609278738498688, "center": 0.11980137974023819, "right": 0.419270783662796}}
+{"image": "076.png", "entity": "crate", "phrase": "a blue box", "area": 27797, "task": "near", "expected": true, "p_yes": 0.6045539379119873, "p_lowres": 0.8859239816665649}
+{"image": "076.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.44184139370918274}
+{"image": "077.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.17765866219997406}
+{"image": "077.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.21997012197971344}
+{"image": "077.png", "entity": "crate", "phrase": "a blue box", "area": 1032, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.6356925368309021}
+{"image": "077.png", "entity": "crate", "phrase": "a blue box", "area": 1032, "task": "where", "expected": "left", "cx": 0.2, "crops": {"left": 0.8361344933509827, "center": 0.7674350142478943, "right": 0.8799713253974915}, "words": {"left": 0.5969113707542419, "center": 0.10564868152141571, "right": 0.2974400222301483}}
+{"image": "077.png", "entity": "crate", "phrase": "a blue box", "area": 1032, "task": "near", "expected": false, "p_yes": 0.4182935655117035, "p_lowres": 0.8411784768104553}
+{"image": "077.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2323356568813324}
+{"image": "077.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.21492110192775726}
+{"image": "077.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.13410761952400208}
+{"image": "078.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3132219612598419}
+{"image": "078.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3594401180744171}
+{"image": "078.png", "entity": "crate", "phrase": "a blue box", "area": 1134, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8870485424995422}
+{"image": "078.png", "entity": "crate", "phrase": "a blue box", "area": 1134, "task": "where", "expected": "left", "cx": 0.067, "crops": {"left": 0.8830304145812988, "center": 0.8381428718566895, "right": 0.8702048063278198}, "words": {"left": 0.6802701950073242, "center": 0.09656935930252075, "right": 0.22316040098667145}}
+{"image": "078.png", "entity": "crate", "phrase": "a blue box", "area": 1134, "task": "near", "expected": false, "p_yes": 0.5630603432655334, "p_lowres": 0.7914281487464905}
+{"image": "078.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.34043508768081665}
+{"image": "078.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3932653069496155}
+{"image": "078.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2411576509475708}
+{"image": "079.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3523118793964386}
+{"image": "079.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4380197525024414}
+{"image": "079.png", "entity": "crate", "phrase": "a blue box", "area": 1440, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.873016893863678}
+{"image": "079.png", "entity": "crate", "phrase": "a blue box", "area": 1440, "task": "where", "expected": "right", "cx": 0.864, "crops": {"left": 0.7016232013702393, "center": 0.794920027256012, "right": 0.9477134346961975}, "words": {"left": 0.35914069414138794, "center": 0.11566076427698135, "right": 0.5251985192298889}}
+{"image": "079.png", "entity": "crate", "phrase": "a blue box", "area": 1440, "task": "near", "expected": false, "p_yes": 0.5147724151611328, "p_lowres": 0.9368042349815369}
+{"image": "079.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4311926066875458}
+{"image": "079.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 352, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8987217545509338}
+{"image": "079.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 352, "task": "where", "expected": "left", "cx": 0.292, "crops": {"left": 0.8847419023513794, "center": 0.8568822145462036, "right": 0.5757720470428467}, "words": {"left": 0.8346409201622009, "center": 0.05161704123020172, "right": 0.11374201625585556}}
+{"image": "079.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 352, "task": "near", "expected": false, "p_yes": 0.551334023475647, "p_lowres": 0.8734087347984314}
+{"image": "079.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.29430845379829407}
+{"image": "080.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3996436893939972}
+{"image": "080.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4525661766529083}
+{"image": "080.png", "entity": "crate", "phrase": "a blue box", "area": 777, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9187359809875488}
+{"image": "080.png", "entity": "crate", "phrase": "a blue box", "area": 777, "task": "where", "expected": "left", "cx": 0.178, "crops": {"left": 0.9155991077423096, "center": 0.8559176921844482, "right": 0.9333634972572327}, "words": {"left": 0.6951773166656494, "center": 0.13380782306194305, "right": 0.1710149049758911}}
+{"image": "080.png", "entity": "crate", "phrase": "a blue box", "area": 777, "task": "near", "expected": false, "p_yes": 0.5090370178222656, "p_lowres": 0.8635620474815369}
+{"image": "080.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.6099730730056763}
+{"image": "081.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3420836925506592}
+{"image": "081.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3122684061527252}
+{"image": "081.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8513659834861755}
+{"image": "081.png", "entity": "toy", "phrase": "a yellow ball", "area": 255, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9575607776641846}
+{"image": "081.png", "entity": "toy", "phrase": "a yellow ball", "area": 255, "task": "where", "expected": "left", "cx": 0.128, "crops": {"left": 0.9721367359161377, "center": 0.9791154861450195, "right": 0.9731878638267517}, "words": {"left": 0.5297399759292603, "center": 0.10496440529823303, "right": 0.3652956187725067}}
+{"image": "081.png", "entity": "toy", "phrase": "a yellow ball", "area": 255, "task": "near", "expected": false, "p_yes": 0.5938835144042969, "p_lowres": 0.7964369058609009}
+{"image": "081.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5535288453102112}
+{"image": "081.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 380, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.31877046823501587}
+{"image": "081.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 380, "task": "where", "expected": "center", "cx": 0.623, "crops": {"left": 0.31037870049476624, "center": 0.3427661657333374, "right": 0.46192118525505066}, "words": {"left": 0.526413083076477, "center": 0.08140002936124802, "right": 0.39218688011169434}}
+{"image": "081.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 380, "task": "near", "expected": false, "p_yes": 0.2260313183069229, "p_lowres": 0.5368677973747253}
+{"image": "082.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3855612277984619}
+{"image": "082.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3247053027153015}
+{"image": "082.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8264419436454773}
+{"image": "082.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2736070156097412}
+{"image": "082.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3718714714050293}
+{"image": "082.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.22911551594734192}
+{"image": "083.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.27102890610694885}
+{"image": "083.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.24668394029140472}
+{"image": "083.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8341785669326782}
+{"image": "083.png", "entity": "toy", "phrase": "a yellow ball", "area": 420, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9825305342674255}
+{"image": "083.png", "entity": "toy", "phrase": "a yellow ball", "area": 420, "task": "where", "expected": "right", "cx": 0.719, "crops": {"left": 0.31052735447883606, "center": 0.9513674974441528, "right": 0.9846360683441162}, "words": {"left": 0.47849151492118835, "center": 0.1568804681301117, "right": 0.36462798714637756}}
+{"image": "083.png", "entity": "toy", "phrase": "a yellow ball", "area": 420, "task": "near", "expected": false, "p_yes": 0.542930006980896, "p_lowres": 0.7738705277442932}
+{"image": "083.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4609518349170685}
+{"image": "083.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.2146669626235962}
+{"image": "084.png", "entity": "table", "phrase": "a brown box", "area": 6726, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9055113196372986}
+{"image": "084.png", "entity": "table", "phrase": "a brown box", "area": 6726, "task": "where", "expected": "left", "cx": 0.198, "crops": {"left": 0.9526495337486267, "center": 0.9050641655921936, "right": 0.46303683519363403}, "words": {"left": 0.787697434425354, "center": 0.0798051506280899, "right": 0.13249742984771729}}
+{"image": "084.png", "entity": "table", "phrase": "a brown box", "area": 6726, "task": "near", "expected": false, "p_yes": 0.6048489809036255, "p_lowres": 0.9166437983512878}
+{"image": "084.png", "entity": "apple", "phrase": "a red ball", "area": 192, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9536916613578796}
+{"image": "084.png", "entity": "apple", "phrase": "a red ball", "area": 192, "task": "where", "expected": "left", "cx": 0.214, "crops": {"left": 0.9788051843643188, "center": 0.43701523542404175, "right": 0.4379333555698395}, "words": {"left": 0.7726183533668518, "center": 0.060591451823711395, "right": 0.1667901873588562}}
+{"image": "084.png", "entity": "apple", "phrase": "a red ball", "area": 192, "task": "near", "expected": false, "p_yes": 0.6421722173690796, "p_lowres": 0.8454458713531494}
+{"image": "084.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8147711753845215}
+{"image": "084.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.47524476051330566}
+{"image": "084.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 551, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9337326884269714}
+{"image": "084.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 551, "task": "where", "expected": "right", "cx": 0.9, "crops": {"left": 0.5376383662223816, "center": 0.5015959739685059, "right": 0.9315673112869263}, "words": {"left": 0.42775237560272217, "center": 0.1304832249879837, "right": 0.4417644143104553}}
+{"image": "084.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 551, "task": "near", "expected": false, "p_yes": 0.4012918174266815, "p_lowres": 0.9387056827545166}
+{"image": "084.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5170936584472656}
+{"image": "085.png", "entity": "table", "phrase": "a brown box", "area": 945, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9587265253067017}
+{"image": "085.png", "entity": "table", "phrase": "a brown box", "area": 945, "task": "where", "expected": "center", "cx": 0.509, "crops": {"left": 0.4763222336769104, "center": 0.9709066152572632, "right": 0.699091911315918}, "words": {"left": 0.46981969475746155, "center": 0.1647634506225586, "right": 0.3654167950153351}}
+{"image": "085.png", "entity": "table", "phrase": "a brown box", "area": 945, "task": "near", "expected": false, "p_yes": 0.5790415406227112, "p_lowres": 0.8982237577438354}
+{"image": "085.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9583471417427063}
+{"image": "085.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9289776682853699}
+{"image": "085.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 2180, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.945785641670227}
+{"image": "085.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 2180, "task": "where", "expected": "left", "cx": 0.03, "crops": {"left": 0.9061769843101501, "center": 0.6341986656188965, "right": 0.5608305931091309}, "words": {"left": 0.6297454237937927, "center": 0.15184277296066284, "right": 0.21841180324554443}}
+{"image": "085.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 2180, "task": "near", "expected": true, "p_yes": 0.5382765531539917, "p_lowres": 0.812978982925415}
+{"image": "086.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4091779291629791}
+{"image": "086.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.30566373467445374}
+{"image": "086.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8887768983840942}
+{"image": "086.png", "entity": "toy", "phrase": "a yellow ball", "area": 361, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9229874014854431}
+{"image": "086.png", "entity": "toy", "phrase": "a yellow ball", "area": 361, "task": "near", "expected": false, "p_yes": 0.5649439096450806, "p_lowres": 0.8377918601036072}
+{"image": "086.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7535438537597656}
+{"image": "086.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 550, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.29818153381347656}
+{"image": "086.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 550, "task": "where", "expected": "right", "cx": 0.959, "crops": {"left": 0.325166791677475, "center": 0.2135581076145172, "right": 0.6009739637374878}, "words": {"left": 0.5412014126777649, "center": 0.09531860053539276, "right": 0.36347994208335876}}
+{"image": "086.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 550, "task": "near", "expected": false, "p_yes": 0.19586431980133057, "p_lowres": 0.5915955901145935}
+{"image": "087.png", "entity": "table", "phrase": "a brown box", "area": 3468, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9827576279640198}
+{"image": "087.png", "entity": "table", "phrase": "a brown box", "area": 3468, "task": "where", "expected": "center", "cx": 0.383, "crops": {"left": 0.9414443373680115, "center": 0.9687448740005493, "right": 0.5646077990531921}, "words": {"left": 0.6109896898269653, "center": 0.1390957534313202, "right": 0.24991455674171448}}
+{"image": "087.png", "entity": "table", "phrase": "a brown box", "area": 3468, "task": "near", "expected": false, "p_yes": 0.6749562621116638, "p_lowres": 0.9302836656570435}
+{"image": "087.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9425065517425537}
+{"image": "087.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5413339734077454}
+{"image": "087.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.39343464374542236}
+{"image": "087.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5962550044059753}
+{"image": "088.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4352431297302246}
+{"image": "088.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.41769546270370483}
+{"image": "088.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8231794238090515}
+{"image": "088.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.39642956852912903}
+{"image": "088.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 6622, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9001383185386658}
+{"image": "088.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 6622, "task": "where", "expected": "left", "cx": 0.066, "crops": {"left": 0.8987864851951599, "center": 0.4022866189479828, "right": 0.5906256437301636}, "words": {"left": 0.6822299361228943, "center": 0.07270417362451553, "right": 0.245065838098526}}
+{"image": "088.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 6622, "task": "near", "expected": true, "p_yes": 0.4823305606842041, "p_lowres": 0.7738088369369507}
+{"image": "088.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3436914384365082}
+{"image": "089.png", "entity": "table", "phrase": "a brown box", "area": 1056, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9076926708221436}
+{"image": "089.png", "entity": "table", "phrase": "a brown box", "area": 1056, "task": "where", "expected": "right", "cx": 0.745, "crops": {"left": 0.5416498780250549, "center": 0.880170464515686, "right": 0.9685311317443848}, "words": {"left": 0.49757257103919983, "center": 0.12626135349273682, "right": 0.37616604566574097}}
+{"image": "089.png", "entity": "table", "phrase": "a brown box", "area": 1056, "task": "near", "expected": false, "p_yes": 0.5209590196609497, "p_lowres": 0.9202911257743835}
+{"image": "089.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9479120373725891}
+{"image": "089.png", "entity": "toy", "phrase": "a yellow ball", "area": 255, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9471920132637024}
+{"image": "089.png", "entity": "toy", "phrase": "a yellow ball", "area": 255, "task": "where", "expected": "left", "cx": 0.119, "crops": {"left": 0.94097501039505, "center": 0.9797798991203308, "right": 0.6676459908485413}, "words": {"left": 0.8256860971450806, "center": 0.053700726479291916, "right": 0.12061319500207901}}
+{"image": "089.png", "entity": "toy", "phrase": "a yellow ball", "area": 255, "task": "near", "expected": false, "p_yes": 0.6874616146087646, "p_lowres": 0.7964304089546204}
+{"image": "089.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7954073548316956}
+{"image": "090.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5525227189064026}
+{"image": "090.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.46675777435302734}
+{"image": "090.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8963959813117981}
+{"image": "090.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4165458083152771}
+{"image": "090.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5215858817100525}
+{"image": "090.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.39406251907348633}
+{"image": "091.png", "entity": "table", "phrase": "a brown box", "area": 903, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9665310382843018}
+{"image": "091.png", "entity": "table", "phrase": "a brown box", "area": 903, "task": "where", "expected": "center", "cx": 0.609, "crops": {"left": 0.3411034941673279, "center": 0.9623838067054749, "right": 0.9281516075134277}, "words": {"left": 0.5155792236328125, "center": 0.1659858226776123, "right": 0.31843501329421997}}
+{"image": "091.png", "entity": "table", "phrase": "a brown box", "area": 903, "task": "near", "expected": false, "p_yes": 0.5557729005813599, "p_lowres": 0.7097815871238708}
+{"image": "091.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9804837107658386}
+{"image": "091.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9757106304168701}
+{"image": "091.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8157573938369751}
+{"image": "092.png", "entity": "table", "phrase": "a brown box", "area": 1392, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9202157855033875}
+{"image": "092.png", "entity": "table", "phrase": "a brown box", "area": 1392, "task": "where", "expected": "right", "cx": 0.805, "crops": {"left": 0.33090096712112427, "center": 0.3699403703212738, "right": 0.9546008110046387}, "words": {"left": 0.5159904360771179, "center": 0.11770831793546677, "right": 0.36630120873451233}}
+{"image": "092.png", "entity": "table", "phrase": "a brown box", "area": 1392, "task": "near", "expected": false, "p_yes": 0.5381702780723572, "p_lowres": 0.8809962272644043}
+{"image": "092.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9731016159057617}
+{"image": "092.png", "entity": "toy", "phrase": "a yellow ball", "area": 195, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9319971203804016}
+{"image": "092.png", "entity": "toy", "phrase": "a yellow ball", "area": 195, "task": "where", "expected": "left", "cx": 0.113, "crops": {"left": 0.9029273986816406, "center": 0.9749116897583008, "right": 0.6613976955413818}, "words": {"left": 0.8311898112297058, "center": 0.04343007877469063, "right": 0.12538011372089386}}
+{"image": "092.png", "entity": "toy", "phrase": "a yellow ball", "area": 195, "task": "near", "expected": false, "p_yes": 0.674988865852356, "p_lowres": 0.8139445185661316}
+{"image": "092.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8714951276779175}
+{"image": "093.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4363973140716553}
+{"image": "093.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3865083158016205}
+{"image": "093.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8328400254249573}
+{"image": "093.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.36418819427490234}
+{"image": "093.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.45104077458381653}
+{"image": "093.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3210698664188385}
+{"image": "094.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.43039003014564514}
+{"image": "094.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.40898290276527405}
+{"image": "094.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.836405336856842}
+{"image": "094.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3511311411857605}
+{"image": "094.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.43526750802993774}
+{"image": "094.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.32307884097099304}
+{"image": "095.png", "entity": "table", "phrase": "a brown box", "area": 9976, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9593778252601624}
+{"image": "095.png", "entity": "table", "phrase": "a brown box", "area": 9976, "task": "where", "expected": "left", "cx": 0.18, "crops": {"left": 0.945509672164917, "center": 0.8966739177703857, "right": 0.22480742633342743}, "words": {"left": 0.8719950318336487, "center": 0.05700678750872612, "right": 0.07099820673465729}}
+{"image": "095.png", "entity": "table", "phrase": "a brown box", "area": 9976, "task": "near", "expected": true, "p_yes": 0.6796514987945557, "p_lowres": 0.7873259782791138}
+{"image": "095.png", "entity": "apple", "phrase": "a red ball", "area": 240, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9567149877548218}
+{"image": "095.png", "entity": "apple", "phrase": "a red ball", "area": 240, "task": "where", "expected": "left", "cx": 0.167, "crops": {"left": 0.9738337993621826, "center": 0.3539985120296478, "right": 0.2872442603111267}, "words": {"left": 0.8663885593414307, "center": 0.03161730617284775, "right": 0.10199419409036636}}
+{"image": "095.png", "entity": "apple", "phrase": "a red ball", "area": 240, "task": "near", "expected": false, "p_yes": 0.6781013607978821, "p_lowres": 0.8333879709243774}
+{"image": "095.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8645793795585632}
+{"image": "095.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4661012589931488}
+{"image": "095.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 195, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9190877079963684}
+{"image": "095.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 195, "task": "where", "expected": "center", "cx": 0.609, "crops": {"left": 0.5243085622787476, "center": 0.9425880908966064, "right": 0.7658978700637817}, "words": {"left": 0.45485422015190125, "center": 0.14652539789676666, "right": 0.3986203670501709}}
+{"image": "095.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 195, "task": "near", "expected": false, "p_yes": 0.49172520637512207, "p_lowres": 0.8692948818206787}
+{"image": "095.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5176470875740051}
+{"image": "096.png", "entity": "table", "phrase": "a brown box", "area": 27058, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9166449904441833}
+{"image": "096.png", "entity": "table", "phrase": "a brown box", "area": 27058, "task": "where", "expected": "right", "cx": 0.744, "crops": {"left": 0.3866051435470581, "center": 0.9360122084617615, "right": 0.8955123424530029}, "words": {"left": 0.6155722737312317, "center": 0.09934519231319427, "right": 0.2850825786590576}}
+{"image": "096.png", "entity": "table", "phrase": "a brown box", "area": 27058, "task": "near", "expected": true, "p_yes": 0.655129611492157, "p_lowres": 0.7725213170051575}
+{"image": "096.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9033486843109131}
+{"image": "096.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5785695910453796}
+{"image": "096.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5955504775047302}
+{"image": "096.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.619731605052948}
+{"image": "097.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.17067289352416992}
+{"image": "097.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.25533244013786316}
+{"image": "097.png", "entity": "crate", "phrase": "a blue box", "area": 338, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.6619570255279541}
+{"image": "097.png", "entity": "crate", "phrase": "a blue box", "area": 338, "task": "where", "expected": "right", "cx": 0.978, "crops": {"left": 0.7062929272651672, "center": 0.613805890083313, "right": 0.937131941318512}, "words": {"left": 0.489551842212677, "center": 0.13803228735923767, "right": 0.37241581082344055}}
+{"image": "097.png", "entity": "crate", "phrase": "a blue box", "area": 338, "task": "near", "expected": false, "p_yes": 0.31302550435066223, "p_lowres": 0.851199209690094}
+{"image": "097.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2460964173078537}
+{"image": "097.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 1088, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.7792076468467712}
+{"image": "097.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 1088, "task": "near", "expected": false, "p_yes": 0.42588454484939575, "p_lowres": 0.8893283009529114}
+{"image": "097.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.12196856737136841}
+{"image": "098.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4904577136039734}
+{"image": "098.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4294854402542114}
+{"image": "098.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8506506681442261}
+{"image": "098.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4019468426704407}
+{"image": "098.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.46190932393074036}
+{"image": "098.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.33995047211647034}
+{"image": "099.png", "entity": "table", "phrase": "a brown box", "area": 182, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.4863043427467346}
+{"image": "099.png", "entity": "table", "phrase": "a brown box", "area": 182, "task": "where", "expected": "right", "cx": 0.988, "crops": {"left": 0.26842984557151794, "center": 0.3898549973964691, "right": 0.6647664308547974}, "words": {"left": 0.6011584997177124, "center": 0.1031724289059639, "right": 0.2956691086292267}}
+{"image": "099.png", "entity": "table", "phrase": "a brown box", "area": 182, "task": "near", "expected": false, "p_yes": 0.19688650965690613, "p_lowres": 0.5886319279670715}
+{"image": "099.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.49300190806388855}
+{"image": "099.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8649463057518005}
+{"image": "099.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9782187342643738}
+{"image": "099.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5848742723464966}
+{"image": "099.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 460, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.5320077538490295}
+{"image": "099.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 460, "task": "where", "expected": "right", "cx": 0.891, "crops": {"left": 0.18874913454055786, "center": 0.32478854060173035, "right": 0.6392857432365417}, "words": {"left": 0.5422278642654419, "center": 0.13906213641166687, "right": 0.3187100291252136}}
+{"image": "099.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 460, "task": "near", "expected": false, "p_yes": 0.2746066153049469, "p_lowres": 0.5662415623664856}
+{"image": "100.png", "entity": "table", "phrase": "a brown box", "area": 15327, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9440856575965881}
+{"image": "100.png", "entity": "table", "phrase": "a brown box", "area": 15327, "task": "where", "expected": "right", "cx": 0.794, "crops": {"left": 0.4543828070163727, "center": 0.9144408106803894, "right": 0.9339620471000671}, "words": {"left": 0.6022179126739502, "center": 0.12623703479766846, "right": 0.2715449929237366}}
+{"image": "100.png", "entity": "table", "phrase": "a brown box", "area": 15327, "task": "near", "expected": true, "p_yes": 0.6962556838989258, "p_lowres": 0.8782065510749817}
+{"image": "100.png", "entity": "apple", "phrase": "a red ball", "area": 390, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9670203924179077}
+{"image": "100.png", "entity": "apple", "phrase": "a red ball", "area": 390, "task": "where", "expected": "right", "cx": 0.842, "crops": {"left": 0.4501417279243469, "center": 0.5432168245315552, "right": 0.9733221530914307}, "words": {"left": 0.6718162298202515, "center": 0.0841168612241745, "right": 0.24406684935092926}}
+{"image": "100.png", "entity": "apple", "phrase": "a red ball", "area": 390, "task": "near", "expected": false, "p_yes": 0.7257936000823975, "p_lowres": 0.8907219171524048}
+{"image": "100.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9039438366889954}
+{"image": "100.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5578039288520813}
+{"image": "100.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4208984971046448}
+{"image": "100.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.6477760076522827}
+{"image": "101.png", "entity": "table", "phrase": "a brown box", "area": 4590, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9148999452590942}
+{"image": "101.png", "entity": "table", "phrase": "a brown box", "area": 4590, "task": "where", "expected": "left", "cx": 0.131, "crops": {"left": 0.9386319518089294, "center": 0.29903364181518555, "right": 0.40559178590774536}, "words": {"left": 0.7075157761573792, "center": 0.10902362316846848, "right": 0.18346059322357178}}
+{"image": "101.png", "entity": "table", "phrase": "a brown box", "area": 4590, "task": "near", "expected": false, "p_yes": 0.5980049967765808, "p_lowres": 0.9030161499977112}
+{"image": "101.png", "entity": "apple", "phrase": "a red ball", "area": 216, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.931358814239502}
+{"image": "101.png", "entity": "apple", "phrase": "a red ball", "area": 216, "task": "where", "expected": "left", "cx": 0.092, "crops": {"left": 0.9667338728904724, "center": 0.3221951723098755, "right": 0.41642993688583374}, "words": {"left": 0.701767086982727, "center": 0.0796576663851738, "right": 0.21857519447803497}}
+{"image": "101.png", "entity": "apple", "phrase": "a red ball", "area": 216, "task": "near", "expected": false, "p_yes": 0.5891827940940857, "p_lowres": 0.8413750529289246}
+{"image": "101.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8800196647644043}
+{"image": "101.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5656277537345886}
+{"image": "101.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4718377888202667}
+{"image": "101.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5984194278717041}
+{"image": "102.png", "entity": "table", "phrase": "a brown box", "area": 9156, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9735921025276184}
+{"image": "102.png", "entity": "table", "phrase": "a brown box", "area": 9156, "task": "where", "expected": "center", "cx": 0.419, "crops": {"left": 0.9467858672142029, "center": 0.972540020942688, "right": 0.9002864360809326}, "words": {"left": 0.5687055587768555, "center": 0.15020529925823212, "right": 0.2810891568660736}}
+{"image": "102.png", "entity": "table", "phrase": "a brown box", "area": 9156, "task": "near", "expected": true, "p_yes": 0.695618748664856, "p_lowres": 0.8894822001457214}
+{"image": "102.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.9227727651596069}
+{"image": "102.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5021109580993652}
+{"image": "102.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3019969165325165}
+{"image": "102.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.6262139678001404}
+{"image": "103.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.48464399576187134}
+{"image": "103.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4353214502334595}
+{"image": "103.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.7954139113426208}
+{"image": "103.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.39797449111938477}
+{"image": "103.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4864163398742676}
+{"image": "103.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3662164509296417}
+{"image": "104.png", "entity": "table", "phrase": "a brown box", "area": 2200, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9082022905349731}
+{"image": "104.png", "entity": "table", "phrase": "a brown box", "area": 2200, "task": "where", "expected": "left", "cx": 0.061, "crops": {"left": 0.919762372970581, "center": 0.2553984224796295, "right": 0.5593831539154053}, "words": {"left": 0.8450560569763184, "center": 0.062120985239744186, "right": 0.09282288700342178}}
+{"image": "104.png", "entity": "table", "phrase": "a brown box", "area": 2200, "task": "near", "expected": false, "p_yes": 0.5058085918426514, "p_lowres": 0.674667477607727}
+{"image": "104.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3777894675731659}
+{"image": "104.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.913219690322876}
+{"image": "104.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4194008409976959}
+{"image": "104.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 588, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9462662935256958}
+{"image": "104.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 588, "task": "where", "expected": "right", "cx": 0.755, "crops": {"left": 0.425899475812912, "center": 0.7204585671424866, "right": 0.9114880561828613}, "words": {"left": 0.5050331950187683, "center": 0.13447754085063934, "right": 0.36048924922943115}}
+{"image": "104.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 588, "task": "near", "expected": false, "p_yes": 0.5618144869804382, "p_lowres": 0.8128325343132019}
+{"image": "104.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2650611102581024}
+{"image": "105.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.17885026335716248}
+{"image": "105.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2362869381904602}
+{"image": "105.png", "entity": "crate", "phrase": "a blue box", "area": 27880, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8583238124847412}
+{"image": "105.png", "entity": "crate", "phrase": "a blue box", "area": 27880, "task": "where", "expected": "left", "cx": 0.211, "crops": {"left": 0.8772473931312561, "center": 0.8234187960624695, "right": 0.8077268004417419}, "words": {"left": 0.7495648264884949, "center": 0.09611023962497711, "right": 0.15432487428188324}}
+{"image": "105.png", "entity": "crate", "phrase": "a blue box", "area": 27880, "task": "near", "expected": true, "p_yes": 0.5959197282791138, "p_lowres": 0.7749977111816406}
+{"image": "105.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.24932798743247986}
+{"image": "105.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 342, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9004032611846924}
+{"image": "105.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 342, "task": "where", "expected": "right", "cx": 0.709, "crops": {"left": 0.5021395683288574, "center": 0.8622933030128479, "right": 0.8937890529632568}, "words": {"left": 0.5095440149307251, "center": 0.1117943525314331, "right": 0.3786616623401642}}
+{"image": "105.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 342, "task": "near", "expected": false, "p_yes": 0.5307053923606873, "p_lowres": 0.8798689246177673}
+{"image": "105.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.1250319927930832}
+{"image": "106.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4121945798397064}
+{"image": "106.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.45983409881591797}
+{"image": "106.png", "entity": "crate", "phrase": "a blue box", "area": 644, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8854037523269653}
+{"image": "106.png", "entity": "crate", "phrase": "a blue box", "area": 644, "task": "where", "expected": "center", "cx": 0.502, "crops": {"left": 0.7837121486663818, "center": 0.9498977661132812, "right": 0.8871285915374756}, "words": {"left": 0.5353000164031982, "center": 0.15258727967739105, "right": 0.3121126890182495}}
+{"image": "106.png", "entity": "crate", "phrase": "a blue box", "area": 644, "task": "near", "expected": false, "p_yes": 0.5570778250694275, "p_lowres": 0.8370031714439392}
+{"image": "106.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.47410279512405396}
+{"image": "106.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3191578686237335}
+{"image": "107.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.2571339011192322}
+{"image": "107.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.45715659856796265}
+{"image": "107.png", "entity": "crate", "phrase": "a blue box", "area": 546, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8220742344856262}
+{"image": "107.png", "entity": "crate", "phrase": "a blue box", "area": 546, "task": "near", "expected": false, "p_yes": 0.4435123801231384, "p_lowres": 0.8715006709098816}
+{"image": "107.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 1386, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.7512773275375366}
+{"image": "107.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 1386, "task": "where", "expected": "left", "cx": 0.02, "crops": {"left": 0.8241461515426636, "center": 0.41006121039390564, "right": 0.6373253464698792}, "words": {"left": 0.698102593421936, "center": 0.1015157476067543, "right": 0.20038168132305145}}
+{"image": "107.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 1386, "task": "near", "expected": true, "p_yes": 0.37128087878227234, "p_lowres": 0.8241840600967407}
+{"image": "107.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.48128002882003784}
+{"image": "108.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.267025351524353}
+{"image": "108.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.31669729948043823}
+{"image": "108.png", "entity": "crate", "phrase": "a blue box", "area": 1189, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9722146391868591}
+{"image": "108.png", "entity": "crate", "phrase": "a blue box", "area": 1189, "task": "where", "expected": "center", "cx": 0.613, "crops": {"left": 0.7668121457099915, "center": 0.9388525485992432, "right": 0.9431849718093872}, "words": {"left": 0.5737431645393372, "center": 0.1389550119638443, "right": 0.28730183839797974}}
+{"image": "108.png", "entity": "crate", "phrase": "a blue box", "area": 1189, "task": "near", "expected": false, "p_yes": 0.6247283220291138, "p_lowres": 0.8409995436668396}
+{"image": "108.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3080121576786041}
+{"image": "108.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3251977562904358}
+{"image": "108.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.17206665873527527}
+{"image": "109.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5680624842643738}
+{"image": "109.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4975486099720001}
+{"image": "109.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8690544366836548}
+{"image": "109.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.43974918127059937}
+{"image": "109.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5674432516098022}
+{"image": "109.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3986048400402069}
+{"image": "110.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5043715238571167}
+{"image": "110.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4420652985572815}
+{"image": "110.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8839062452316284}
+{"image": "110.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.39178356528282166}
+{"image": "110.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4878087341785431}
+{"image": "110.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3781186044216156}
+{"image": "111.png", "entity": "table", "phrase": "a brown box", "area": 370, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.4659465551376343}
+{"image": "111.png", "entity": "table", "phrase": "a brown box", "area": 370, "task": "where", "expected": "left", "cx": 0.014, "crops": {"left": 0.7795283794403076, "center": 0.3815210461616516, "right": 0.5570030212402344}, "words": {"left": 0.5977842807769775, "center": 0.13475432991981506, "right": 0.2674614489078522}}
+{"image": "111.png", "entity": "table", "phrase": "a brown box", "area": 370, "task": "near", "expected": false, "p_yes": 0.28512150049209595, "p_lowres": 0.5301201343536377}
+{"image": "111.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4359906315803528}
+{"image": "111.png", "entity": "crate", "phrase": "a blue box", "area": 540, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8413768410682678}
+{"image": "111.png", "entity": "crate", "phrase": "a blue box", "area": 540, "task": "where", "expected": "right", "cx": 0.967, "crops": {"left": 0.9013631343841553, "center": 0.7776932120323181, "right": 0.9443638920783997}, "words": {"left": 0.477774977684021, "center": 0.18383154273033142, "right": 0.3383934497833252}}
+{"image": "111.png", "entity": "crate", "phrase": "a blue box", "area": 540, "task": "near", "expected": false, "p_yes": 0.4749322235584259, "p_lowres": 0.8178787231445312}
+{"image": "111.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4834974408149719}
+{"image": "111.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 221, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8710420727729797}
+{"image": "111.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 221, "task": "where", "expected": "center", "cx": 0.469, "crops": {"left": 0.810802161693573, "center": 0.8949805498123169, "right": 0.6522548198699951}, "words": {"left": 0.6032208800315857, "center": 0.14081749320030212, "right": 0.2559616267681122}}
+{"image": "111.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 221, "task": "near", "expected": false, "p_yes": 0.5511792898178101, "p_lowres": 0.8466128706932068}
+{"image": "111.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.31008851528167725}
+{"image": "112.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4419829845428467}
+{"image": "112.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.47325780987739563}
+{"image": "112.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.7610040307044983}
+{"image": "112.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4817943274974823}
+{"image": "112.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 8475, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8656063675880432}
+{"image": "112.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 8475, "task": "where", "expected": "left", "cx": 0.116, "crops": {"left": 0.706402063369751, "center": 0.4450682997703552, "right": 0.5571319460868835}, "words": {"left": 0.6725890040397644, "center": 0.08764315396547318, "right": 0.23976778984069824}}
+{"image": "112.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 8475, "task": "near", "expected": true, "p_yes": 0.6449378132820129, "p_lowres": 0.8322246670722961}
+{"image": "112.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3650503158569336}
+{"image": "113.png", "entity": "table", "phrase": "a brown box", "area": 28756, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.8958185315132141}
+{"image": "113.png", "entity": "table", "phrase": "a brown box", "area": 28756, "task": "where", "expected": "right", "cx": 0.752, "crops": {"left": 0.3720541298389435, "center": 0.8860007524490356, "right": 0.871026873588562}, "words": {"left": 0.6105414032936096, "center": 0.07546757906675339, "right": 0.313990980386734}}
+{"image": "113.png", "entity": "table", "phrase": "a brown box", "area": 28756, "task": "near", "expected": true, "p_yes": 0.6578167080879211, "p_lowres": 0.7703943252563477}
+{"image": "113.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4553035795688629}
+{"image": "113.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8078147768974304}
+{"image": "113.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4311991035938263}
+{"image": "113.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4914311468601227}
+{"image": "113.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.39880743622779846}
+{"image": "114.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.41426974534988403}
+{"image": "114.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3288753926753998}
+{"image": "114.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8574443459510803}
+{"image": "114.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9869503378868103}
+{"image": "114.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3556555509567261}
+{"image": "114.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 756, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.2569558024406433}
+{"image": "114.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 756, "task": "near", "expected": false, "p_yes": 0.2154674530029297, "p_lowres": 0.44537264108657837}
+{"image": "115.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4009262025356293}
+{"image": "115.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4624929428100586}
+{"image": "115.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8328630924224854}
+{"image": "115.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.46371981501579285}
+{"image": "115.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 391, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.9082733392715454}
+{"image": "115.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 391, "task": "where", "expected": "center", "cx": 0.562, "crops": {"left": 0.3137301504611969, "center": 0.9250205159187317, "right": 0.9028278589248657}, "words": {"left": 0.5954251289367676, "center": 0.1558809131383896, "right": 0.24869395792484283}}
+{"image": "115.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 391, "task": "near", "expected": false, "p_yes": 0.50547194480896, "p_lowres": 0.7908576130867004}
+{"image": "115.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.29562970995903015}
+{"image": "116.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.41001781821250916}
+{"image": "116.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3013664484024048}
+{"image": "116.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.893082320690155}
+{"image": "116.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.9853110313415527}
+{"image": "116.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.3380506634712219}
+{"image": "116.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 600, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.3196309506893158}
+{"image": "116.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 600, "task": "near", "expected": false, "p_yes": 0.22181949019432068, "p_lowres": 0.5906035304069519}
+{"image": "117.png", "entity": "table", "phrase": "a brown box", "area": 9324, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9737895727157593}
+{"image": "117.png", "entity": "table", "phrase": "a brown box", "area": 9324, "task": "where", "expected": "center", "cx": 0.417, "crops": {"left": 0.9456112384796143, "center": 0.9399837851524353, "right": 0.953883945941925}, "words": {"left": 0.5706114768981934, "center": 0.14034685492515564, "right": 0.2890416979789734}}
+{"image": "117.png", "entity": "table", "phrase": "a brown box", "area": 9324, "task": "near", "expected": true, "p_yes": 0.6776286363601685, "p_lowres": 0.8494894504547119}
+{"image": "117.png", "entity": "apple", "phrase": "a red ball", "area": 187, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.9346359372138977}
+{"image": "117.png", "entity": "apple", "phrase": "a red ball", "area": 187, "task": "where", "expected": "center", "cx": 0.422, "crops": {"left": 0.9711406230926514, "center": 0.9618028402328491, "right": 0.5368688106536865}, "words": {"left": 0.5894945859909058, "center": 0.11159378290176392, "right": 0.2989117205142975}}
+{"image": "117.png", "entity": "apple", "phrase": "a red ball", "area": 187, "task": "near", "expected": false, "p_yes": 0.6164065003395081, "p_lowres": 0.7369696497917175}
+{"image": "117.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.8594365119934082}
+{"image": "117.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3795234262943268}
+{"image": "117.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.19366659224033356}
+{"image": "117.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.4500000774860382}
+{"image": "118.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5165440440177917}
+{"image": "118.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4952189028263092}
+{"image": "118.png", "entity": "crate", "phrase": "a blue box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.8460296392440796}
+{"image": "118.png", "entity": "toy", "phrase": "a yellow ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.5223830342292786}
+{"image": "118.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 546, "task": "presence", "expected": true, "decoy_in_view": true, "p_yes": 0.8967770934104919}
+{"image": "118.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 546, "task": "where", "expected": "right", "cx": 0.989, "crops": {"left": 0.44130992889404297, "center": 0.4222235679626465, "right": 0.9022015929222107}, "words": {"left": 0.564961850643158, "center": 0.10562887042760849, "right": 0.32940924167633057}}
+{"image": "118.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 546, "task": "near", "expected": true, "p_yes": 0.5576905012130737, "p_lowres": 0.8094730973243713}
+{"image": "118.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": true, "p_yes": 0.4567050337791443}
+{"image": "119.png", "entity": "table", "phrase": "a brown box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.20899221301078796}
+{"image": "119.png", "entity": "apple", "phrase": "a red ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.392343670129776}
+{"image": "119.png", "entity": "crate", "phrase": "a blue box", "area": 1824, "task": "presence", "expected": true, "decoy_in_view": false, "p_yes": 0.889503538608551}
+{"image": "119.png", "entity": "crate", "phrase": "a blue box", "area": 1824, "task": "where", "expected": "left", "cx": 0.27, "crops": {"left": 0.9240326881408691, "center": 0.8364518284797668, "right": 0.9089810252189636}, "words": {"left": 0.7222971320152283, "center": 0.11357688903808594, "right": 0.16412602365016937}}
+{"image": "119.png", "entity": "crate", "phrase": "a blue box", "area": 1824, "task": "near", "expected": false, "p_yes": 0.5533313155174255, "p_lowres": 0.8735445141792297}
+{"image": "119.png", "entity": "decoy_green_box", "phrase": "a green box", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.5701770782470703}
+{"image": "119.png", "entity": "decoy_orange_ball", "phrase": "an orange ball", "area": 0, "task": "presence", "expected": false, "decoy_in_view": false, "p_yes": 0.3379926383495331}

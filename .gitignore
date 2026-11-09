@@ -11,3 +11,6 @@ __pycache__/
 
 # Prototype run outputs
 runs/
+
+# Benchmark images: regenerate with sim/capture_dataset.py (seeded); results/ are kept
+bench/data/

@@ -29,7 +29,7 @@ answer is valid and has a probability.
 
 | Action | Behaviour | Outcome |
 |---|---|---|
-| `movetowards{target}` | navigate to the target's approach pose, confirm it is in view | SUCCEEDED, or BLOCKED/OBJECT_NOT_FOUND, BLOCKED/PATH_BLOCKED |
+| `movetowards{target}` | `--approach map` (default): navigate to the target's approach pose, confirm it is in view. `--approach visual`: the VLM picks each goal: it says whether the target is left, center or right (or not in view, then the robot turns 45°), the executor sends a goal 0.4 m that way to the navigator, and it stops when the target is centred and the VLM says it is near (or, with `--near-source map`, when within 0.6 m of its map position) | SUCCEEDED, or BLOCKED/OBJECT_NOT_FOUND, BLOCKED/PATH_BLOCKED, FAILED/DECISION_LIMIT (not near after 10 goals) |
 | `search{object, area}` | go to the area (if it has a pose), look in 8 × 45° turns | SUCCEEDED + `entity_located` observation, or BLOCKED/OBJECT_NOT_FOUND + `entity_absent` |
 | `inspect{target}` | as `movetowards` | |
 | `open, close, grab, putinto, puton, push` | not available without a manipulator | REJECTED/UNKNOWN_ACTION |
@@ -37,7 +37,7 @@ answer is valid and has a probability.
 ## Run it
 
 ```bash
-# Unit tests (no GPU, no Isaac Sim): 28 tests
+# Unit tests (no GPU, no Isaac Sim): 37 tests
 python -m pytest -q tests/unit
 
 # Without a model: ground-truth perceiver
@@ -47,10 +47,17 @@ $ISAACSIM_PATH/python.sh run_prototype.py --perceiver ground_truth --headless --
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt   # once
 .venv/bin/python vlm_server/smolvlm_server.py --model models/SmolVLM-Instruct &
 $ISAACSIM_PATH/python.sh run_prototype.py --perceiver vlm --headless --save-images
+
+# Onboard (emulated Raspberry Pi 5) with the VLM choosing the goals: see docs/ONBOARD_VLM.md
+.venv/bin/python vlm_server/smolvlm_server.py --model models/SmolVLM-500M-Instruct --profile pi5_emulated &
+taskset -c 0-15 $ISAACSIM_PATH/python.sh run_prototype.py --perceiver vlm --approach visual --headless --save-images
 ```
 
 Results go to `runs/<timestamp>-<perceiver>/results.json` (git-ignored), with each perception image if
-`--save-images` is set. A run takes ~6.5 min wall time on an RTX 4080 (see limitations).
+`--save-images` is set. Every navigation goal and model answer is also printed live and written to
+`runs/<timestamp>-<perceiver>/events.jsonl`. With `--profile pi5_emulated` each answer's estimated Pi latency is
+charged to simulation time (the robot stands still while it waits), and `run_prototype.py` reads the model's
+calibrated thresholds from `bench/results/thresholds.json`. A run takes ~6.5 min wall time on an RTX 4080 (see limitations).
 
 ## Results (2026-11-08, Isaac Sim 6.1.0, RTX 4080, SmolVLM-Instruct 2.2B bf16)
 

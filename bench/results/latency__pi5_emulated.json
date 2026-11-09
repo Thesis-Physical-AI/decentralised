@@ -1,0 +1,229 @@
+{
+  "profile": "pi5_emulated",
+  "profile_spec": {
+    "description": "Raspberry Pi 5 stand-in: CPU only, fp32, 4 threads pinned to 4 i9-13900F efficiency cores (CPUs 16-19, max 4.2 GHz). Pi 5: 4x Cortex-A76 at 2.4 GHz, no CUDA GPU, RAM 2/4/8/16 GB by variant.",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "cpu_affinity": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "image_splitting": false,
+    "latency_scale": 1.75,
+    "latency_scale_source": "assumed: clock ratio 4.2 GHz / 2.4 GHz with equal work per clock; the Pi's lower memory bandwidth is not modelled, so real latency is likely higher. Replace with (Pi 5 latency / emulated latency) once measured.",
+    "ram_budget_gb": null,
+    "ram_budget_source": "unknown: which Pi 5 RAM variant the lab's PuppyPi has is open (DECISIONS.md D4). The benchmark reports fit against 4 and 8 GB."
+  },
+  "results": [
+    {
+      "model": "SmolVLM-256M-Instruct",
+      "image_splitting": false,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 3.32,
+      "peak_rss_gb": 2.19,
+      "n": 6,
+      "p_yes_median_s": 1.479,
+      "where_crops_median_s": 4.375,
+      "near_median_s": 1.491,
+      "p_yes_max_s": 1.483,
+      "where_crops_max_s": 4.386,
+      "near_max_s": 1.494,
+      "latency_scale": 1.75
+    },
+    {
+      "model": "SmolVLM-256M-Instruct",
+      "image_splitting": true,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 3.26,
+      "peak_rss_gb": 2.41,
+      "n": 6,
+      "p_yes_median_s": 18.102,
+      "where_crops_median_s": 54.373,
+      "near_median_s": 18.138,
+      "p_yes_max_s": 18.161,
+      "where_crops_max_s": 54.449,
+      "near_max_s": 18.16,
+      "latency_scale": 1.75
+    },
+    {
+      "model": "SmolVLM-500M-Instruct",
+      "image_splitting": false,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 3.34,
+      "peak_rss_gb": 3.59,
+      "n": 6,
+      "p_yes_median_s": 1.704,
+      "where_crops_median_s": 5.059,
+      "near_median_s": 1.739,
+      "p_yes_max_s": 1.708,
+      "where_crops_max_s": 5.062,
+      "near_max_s": 1.74,
+      "latency_scale": 1.75
+    },
+    {
+      "model": "SmolVLM-500M-Instruct",
+      "image_splitting": true,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 3.32,
+      "peak_rss_gb": 3.59,
+      "n": 6,
+      "p_yes_median_s": 20.189,
+      "where_crops_median_s": 60.527,
+      "near_median_s": 20.216,
+      "p_yes_max_s": 20.212,
+      "where_crops_max_s": 60.59,
+      "near_max_s": 20.234,
+      "latency_scale": 1.75
+    },
+    {
+      "model": "SmolVLM-256M-Instruct-int8",
+      "image_splitting": false,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 3.81,
+      "peak_rss_gb": 2.79,
+      "n": 6,
+      "p_yes_median_s": 2.875,
+      "where_crops_median_s": 8.506,
+      "near_median_s": 2.893,
+      "p_yes_max_s": 2.953,
+      "where_crops_max_s": 8.682,
+      "near_max_s": 2.941,
+      "latency_scale": 1.75
+    },
+    {
+      "model": "SmolVLM-500M-Instruct-int8",
+      "image_splitting": false,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 4.74,
+      "peak_rss_gb": 4.66,
+      "n": 6,
+      "p_yes_median_s": 3.434,
+      "where_crops_median_s": 10.254,
+      "near_median_s": 3.519,
+      "p_yes_max_s": 3.458,
+      "where_crops_max_s": 10.335,
+      "near_max_s": 3.563,
+      "latency_scale": 1.75
+    },
+    {
+      "model": "SmolVLM-Instruct",
+      "image_splitting": false,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 4.66,
+      "peak_rss_gb": 13.31,
+      "n": 3,
+      "p_yes_median_s": 7.057,
+      "where_crops_median_s": 21.104,
+      "near_median_s": 7.211,
+      "p_yes_max_s": 7.093,
+      "where_crops_max_s": 21.161,
+      "near_max_s": 7.229,
+      "latency_scale": 1.75
+    },
+    {
+      "model": "SmolVLM2-256M-Video-Instruct",
+      "image_splitting": false,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 2.57,
+      "peak_rss_gb": 1.76,
+      "n": 6,
+      "p_yes_median_s": 1.621,
+      "where_crops_median_s": 4.844,
+      "near_median_s": 1.638,
+      "p_yes_max_s": 1.625,
+      "where_crops_max_s": 4.86,
+      "near_max_s": 1.657,
+      "latency_scale": 1.75
+    },
+    {
+      "model": "SmolVLM2-500M-Video-Instruct",
+      "image_splitting": false,
+      "device": "cpu",
+      "dtype": "float32",
+      "threads": 4,
+      "cpus": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "load_s": 2.43,
+      "peak_rss_gb": 2.62,
+      "n": 6,
+      "p_yes_median_s": 1.893,
+      "where_crops_median_s": 5.613,
+      "near_median_s": 1.91,
+      "p_yes_max_s": 1.899,
+      "where_crops_max_s": 5.656,
+      "near_max_s": 1.936,
+      "latency_scale": 1.75
+    }
+  ]
+}
