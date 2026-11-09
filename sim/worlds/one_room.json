@@ -20,6 +20,7 @@
       "shape": {"type": "box", "size": [0.3, 0.3, 0.25], "color": [0.1, 0.2, 0.8]}
     },
     "toy": {
+      "_note": "Deliberately NOT placed in the scene: the robot's map says it exists, so mission step S4 (search toy) must end BLOCKED/OBJECT_NOT_FOUND with an entity_absent observation. Tests that perception does not report objects that are not there.",
       "kind": "object", "description": "a yellow ball", "in": "living_room", "present_in_sim": false,
       "position": [-1.2, 1.2, 0.05],
       "shape": {"type": "sphere", "radius": 0.05, "color": [0.95, 0.85, 0.1]}

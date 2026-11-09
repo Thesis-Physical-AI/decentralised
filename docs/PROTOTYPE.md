@@ -56,6 +56,12 @@ Results go to `runs/<timestamp>-<perceiver>/results.json` (git-ignored), with ea
 
 Mission `missions/demo_one_room.json` in `sim/worlds/one_room.json`:
 
+> **The toy is missing on purpose.** In the world file the toy ("a yellow ball") has `present_in_sim: false`: it is in
+> the robot's semantic map but not built in the scene, so you will not see it in the viewport. Step S4 is a negative
+> test: the robot must look all the way round and report BLOCKED/OBJECT_NOT_FOUND with an `entity_absent`
+> observation instead of claiming to see an object that is not there (a false "yes" would corrupt the center's
+> world model). To place it, set `present_in_sim` to `true`.
+
 | Step | Ground-truth perceiver | SmolVLM perceiver |
 |---|---|---|
 | S1 `movetowards table` | SUCCEEDED | SUCCEEDED (p_yes 0.980) |
