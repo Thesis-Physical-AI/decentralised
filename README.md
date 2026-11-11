@@ -8,7 +8,6 @@ A simulated Hiwonder PuppyPi quadruped in Isaac Sim 6.x, plus a Python environme
 > [Interface contracts](https://github.com/Thesis-Physical-AI/centralized/blob/main/docs/INTERFACE_CONTRACTS.md) ·
 > [Open decisions](https://github.com/Thesis-Physical-AI/centralized/blob/main/docs/DECISIONS.md) ·
 > [Roadmap](https://github.com/Thesis-Physical-AI/centralized/blob/main/docs/ROADMAP.md).
-> Agent rules for this repo: [`AGENTS.md`](AGENTS.md).
 
 ## Architecture (target design)
 
@@ -26,19 +25,17 @@ dot -Tsvg docs/architecture.dot -o docs/architecture.svg
 
 So far: the puppy driver (`hello_puppy.py`, without ROS yet) and an experimental step-executor prototype in which the
 VLM answers closed visual questions and can choose navigation goals, running under an emulated Raspberry Pi 5 profile
-([`docs/PROTOTYPE.md`](docs/PROTOTYPE.md), [`docs/ONBOARD_VLM.md`](docs/ONBOARD_VLM.md)). ROS 2 and Nav2 are planned.
+([`docs/ONBOARD_VLM.md`](docs/ONBOARD_VLM.md)). ROS 2 and Nav2 are planned.
 
 ## Contents
 
 | Path | What it is |
 | --- | --- |
 | `hello_puppy.py` | Loads the PuppyPi into Isaac Sim and runs a sequence of movements (stand, walk, turn, sit, wave, ...). |
-| `run_prototype.py` | **Experimental:** runs mission steps through the step executor in Isaac Sim, with SmolVLM or ground-truth perception. See [`docs/PROTOTYPE.md`](docs/PROTOTYPE.md). |
+| `run_prototype.py` | **Experimental:** runs mission steps through the step executor in Isaac Sim, with SmolVLM or ground-truth perception. Calibrated VLM thresholds per model are in `THRESHOLDS`. |
 | `puppy_agent/` | Step executor, Nav2-shaped navigation interface, perception interface, gait and IK. Plain Python, unit-tested. |
-| `sim/` | Isaac Sim driver for the prototype (velocity-driven gait, front camera, ground-truth boxes), world files, and `capture_dataset.py` for labelled benchmark images. |
-| `vlm_server/` | SmolVLM perception server: closed questions (visible? left/center/right? near?) over local HTTP, under an onboard-computer profile. |
-| `config/onboard_profiles.json` | Onboard-computer profiles (workstation GPU, emulated Raspberry Pi 5). |
-| `bench/` | Onboard model benchmark (`vlm_bench.py`) and its results; model choice in [`docs/ONBOARD_VLM.md`](docs/ONBOARD_VLM.md). |
+| `sim/` | Isaac Sim driver for the prototype (velocity-driven gait, front camera) and world files. |
+| `vlm_server/` | SmolVLM perception server over local HTTP, under an onboard-computer profile: single closed questions (visible? left/center/right? near?), and `/ask` for a whole question set about one frame of the live camera feed (open answers in words plus scored ones). Live view at `/view`. Onboard-computer profiles (workstation GPU, emulated Raspberry Pi 5) are in `PROFILES` in `smolvlm_server.py`. |
 | `missions/` | Example mission steps in contract v0.1 form. |
 | `tests/unit/` | GPU-free tests: `python -m pytest -q tests/unit`. |
 | `puppy_isaac/` | The PuppyPi robot as USD, converted from URDF. Physics lives behind a `Physics` variant (`physx`, `mujoco`, `physics`, `none`). |

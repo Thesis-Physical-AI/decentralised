@@ -17,7 +17,6 @@ import numpy as np
 import omni.replicator.core as rep
 from isaacsim.core.experimental.objects import DistantLight, GroundPlane
 from isaacsim.core.experimental.prims import Articulation, XformPrim
-from isaacsim.core.experimental.utils.semantics import add_labels
 from isaacsim.core.simulation_manager import SimulationManager
 from pxr import Gf, UsdGeom, UsdLux, UsdPhysics
 
@@ -73,7 +72,6 @@ def build_world(stage, world):
             _box(stage, path, spec["position"], shape["size"], shape["color"])
         elif shape["type"] == "sphere":
             _sphere(stage, path, spec["position"], shape["radius"], shape["color"])
-        add_labels(path, labels=[name])  # for ground-truth annotators; invisible to the robot
 
 
 class PuppySim:
@@ -101,10 +99,9 @@ class PuppySim:
         camera.CreateClippingRangeAttr(Gf.Vec2f(0.01, 50.0))
         cx, cy, cz = CAMERA_OFFSET
         UsdGeom.Xformable(camera).AddTransformOp().Set(Gf.Matrix4d(0, -1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, cx, cy, cz, 1))
-        self._render_product = rep.create.render_product(str(camera.GetPath()), resolution)
+        render_product = rep.create.render_product(str(camera.GetPath()), resolution)
         self._rgb = rep.AnnotatorRegistry.get_annotator("rgb")
-        self._rgb.attach([self._render_product])
-        self._bbox = None
+        self._rgb.attach([render_product])
 
         self.robot = Articulation(ROBOT_PATH)
         SimulationManager.set_physics_dt(PHYSICS_DT)
@@ -144,34 +141,6 @@ class PuppySim:
     def capture(self):
         rep.orchestrator.step(rt_subframes=4, pause_timeline=False)
         return np.asarray(self._rgb.get_data())[:, :, :3].copy()
-
-    def enable_ground_truth(self):
-        """Attach a 2D tight bounding-box annotator (visible pixels only) to the front camera."""
-        self._bbox = rep.AnnotatorRegistry.get_annotator("bounding_box_2d_tight")
-        self._bbox.attach([self._render_product])
-
-    def visible_boxes(self):
-        """{entity: (x_min, y_min, x_max, y_max, occlusion_ratio)} for the frame from the last capture().
-
-        Only labelled entities with at least one visible pixel are listed. Requires enable_ground_truth().
-        """
-        out = self._bbox.get_data()
-        id_to_label = {int(k): v["class"] for k, v in out["info"]["idToLabels"].items()}
-        boxes = {}
-        for row in out["data"]:
-            name = id_to_label.get(int(row["semanticId"]))
-            if name:
-                boxes[name] = (int(row["x_min"]), int(row["y_min"]), int(row["x_max"]), int(row["y_max"]),
-                               float(row["occlusionRatio"]))
-        return boxes
-
-    def teleport(self, x, y, yaw):
-        """Place the robot standing at (x, y, yaw) and let it settle. For dataset capture, not for missions."""
-        half = yaw / 2
-        self.robot.set_world_poses(positions=[x, y, 0.16], orientations=[math.cos(half), 0.0, 0.0, math.sin(half)])
-        self.robot.set_velocities(np.zeros((1, 3)), np.zeros((1, 3)))
-        self.set_cmd_vel(0.0, 0.0)
-        self.advance(0.6)
 
     def camera_pose(self):
         x, y, _, yaw, _, _ = self._base_state()

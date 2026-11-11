@@ -7,7 +7,7 @@ centralized `docs/SYSTEM_ARCHITECTURE.md` §6, §9, §10 and `docs/DECISIONS.md`
 ## Recommendation
 
 **SmolVLM-500M-Instruct, image splitting off, fp32**, with the calibrated thresholds in
-[`bench/results/thresholds.json`](../bench/results/thresholds.json) (visible ≥ 0.0151, near ≥ 0.3203).
+`THRESHOLDS` in [`run_prototype.py`](../run_prototype.py) (visible ≥ 0.0151, near ≥ 0.3203).
 
 - It is the only small model that answers all three questions the robot asks well enough: is the target there
   (held-out balanced accuracy 0.82), which side is it on (0.75, chance 0.44), and is it close (0.83). The 256M model
@@ -47,7 +47,7 @@ shrunk 8× (far objects vanish), which did not separate near from far (AUC 0.53�
 
 ### Emulating the Raspberry Pi 5
 
-[`config/onboard_profiles.json`](../config/onboard_profiles.json), profile `pi5_emulated`:
+`PROFILES` in [`vlm_server/smolvlm_server.py`](../vlm_server/smolvlm_server.py), profile `pi5_emulated`:
 
 | Setting | Value | Measured or assumed |
 |---|---|---|
@@ -67,8 +67,8 @@ instead of the assumed scale.
 
 ### Labelled images
 
-[`sim/capture_dataset.py`](../sim/capture_dataset.py) teleports the PuppyPi to 120 random poses in
-[`sim/worlds/one_room_eval.json`](../sim/worlds/one_room_eval.json) (seed 0; about half aimed near an object) and
+`sim/capture_dataset.py` (no longer in the working tree; in git at commit 913239e) teleported the PuppyPi to 120 random poses in
+`sim/worlds/one_room_eval.json` (seed 0; about half aimed near an object) and
 saves the 320×240 front-camera image. That world is `one_room` plus the toy placed in the scene and two decoys that
 share a colour or a shape with the targets (a green box, an orange ball). Ground truth comes from Isaac Sim's
 `bounding_box_2d_tight` annotator: the box of each object's **visible** pixels, so occlusion is included.
@@ -78,12 +78,12 @@ share a colour or a shape with the targets (a green box, an orange ball). Ground
 - near: box height ≥ 25 % of the image height
 
 Result: 120 images; 661 presence questions (147 visible, 514 absent), 122 where questions, 147 near questions
-(32 near). Labels are never shown to the model. The images are git-ignored; regenerate with
-`$ISAACSIM_PATH/python.sh sim/capture_dataset.py --headless --count 120`.
+(32 near). Labels are never shown to the model. The images were git-ignored; regenerating them needs
+`sim/capture_dataset.py` and `sim/worlds/one_room_eval.json` from git (commit 913239e).
 
 ### Measurements
 
-[`bench/vlm_bench.py`](../bench/vlm_bench.py):
+`bench/vlm_bench.py` (no longer in the working tree; in git at commit 913239e):
 
 - **accuracy** — every question on every image. Run on the GPU in fp32 (the Pi's precision; accuracy does not
   depend on which chip does the arithmetic) except int8 models, which run on the CPU.
@@ -101,7 +101,7 @@ Result: 120 images; 661 presence questions (147 visible, 514 absent), 122 where 
 
 ## Results
 
-Raw results: [`bench/results/`](../bench/results/) (one JSON line per question; latency JSON).
+Raw results: `bench/results/` (one JSON line per question; latency JSON), in git at commit 913239e.
 
 ### Accuracy (120 labelled sim images)
 

@@ -6,12 +6,12 @@
     "living_room": {"kind": "room", "description": "a room"},
     "table": {
       "kind": "surface", "description": "a brown box", "in": "living_room",
-      "position": [1.4, 0.8, 0.15], "approach": [0.75, 0.8, 0],
-      "shape": {"type": "box", "size": [0.4, 0.6, 0.3], "color": [0.55, 0.35, 0.2]}
+      "position": [1.4, 0.8, 0.04], "approach": [0.75, 0.8, 0],
+      "shape": {"type": "box", "size": [0.4, 0.6, 0.08], "color": [0.55, 0.35, 0.2]}
     },
     "apple": {
       "kind": "object", "description": "a red ball", "in": "table", "weight_kg": 0.15,
-      "position": [1.4, 0.8, 0.35],
+      "position": [1.4, 0.8, 0.13],
       "shape": {"type": "sphere", "radius": 0.05, "color": [0.9, 0.05, 0.05]}
     },
     "crate": {

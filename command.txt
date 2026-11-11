@@ -1,2 +1,12 @@
+One-time setup (the project .venv is still missing torch):
+.venv/bin/pip install -r requirements.txt
 
-~/projects/isaacsim/_build/linux-x86_64/release/python.sh hello_puppy.py --keep-open
+Terminal 1 – VLM server:
+cd ~/Desktop/Projects/decentralised
+.venv/bin/python vlm_server/smolvlm_server.py --model models/SmolVLM-Instruct --profile workstation_gpu_live
+The server from my run is still on port 8765, so either stop it first or skip this step and reuse it.
+
+Terminal 2 – mission:
+cd ~/Desktop/Projects/decentralised
+export ISAACSIM_PATH=~/Desktop/Projects/isaacsim/_build/linux-x86_64/release
+$ISAACSIM_PATH/python.sh run_prototype.py --perceiver vlm --approach live

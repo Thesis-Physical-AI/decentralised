@@ -3,6 +3,7 @@
 The executor only talks to `Navigator`. Its methods mirror Nav2's action interfaces:
   go_to(pose)  ~ nav2_msgs/action/NavigateToPose   (goal pose in the map frame)
   spin(angle)  ~ nav2_msgs/action/Spin             (behavior server)
+  back_up(d)   ~ nav2_msgs/action/BackUp           (behavior server)
   feedback()   ~ action feedback (distance_remaining)
   result()     ~ action result: None while running, else SUCCEEDED / ABORTED / CANCELED
   cancel()     ~ cancel the active goal
@@ -44,6 +45,7 @@ class Robot(Protocol):
 class Navigator(Protocol):
     def go_to(self, goal: Pose2D) -> None: ...
     def spin(self, angle: float) -> None: ...
+    def back_up(self, distance: float) -> None: ...
     def spin_once(self) -> None: ...  # do one control update; with Nav2: spin the rclpy node
     def feedback(self) -> dict: ...
     def result(self) -> Optional[str]: ...
@@ -72,6 +74,12 @@ class SimpleNavigator:
         self._spin_left = angle
         self._last_yaw = self.robot.odom().yaw
 
+    def back_up(self, distance):
+        self._mode, self._result = "back_up", None
+        self._back_left = abs(distance)
+        self._back_start = self.robot.odom()
+        self._back_t0 = self.robot.now()
+
     def cancel(self):
         if self._mode:
             self._finish(CANCELED)
@@ -85,6 +93,8 @@ class SimpleNavigator:
             return {"distance_remaining": math.hypot(self._goal.x - pose.x, self._goal.y - pose.y)}
         if self._mode == "spin":
             return {"angle_remaining": self._spin_left}
+        if self._mode == "back_up":
+            return {"distance_remaining": self._back_left - self._backed()}
         return {}
 
     # -- control -----------------------------------------------------------------------------
@@ -93,6 +103,8 @@ class SimpleNavigator:
             self._goto_step()
         elif self._mode == "spin":
             self._spin_step()
+        elif self._mode == "back_up":
+            self._back_up_step()
 
     def _finish(self, result):
         self.robot.set_cmd_vel(0.0, 0.0)
@@ -133,3 +145,15 @@ class SimpleNavigator:
             self._finish(SUCCEEDED)
         else:
             self.robot.set_cmd_vel(0.0, self._turn_rate(self._spin_left))
+
+    def _backed(self):
+        pose = self.robot.odom()
+        return math.hypot(pose.x - self._back_start.x, pose.y - self._back_start.y)
+
+    def _back_up_step(self):
+        if self._backed() >= self._back_left - self.pos_tol / 2:
+            self._finish(SUCCEEDED)
+        elif self.robot.now() - self._back_t0 > self.stuck_window_s:
+            self._finish(ABORTED)  # something behind the robot
+        else:
+            self.robot.set_cmd_vel(-0.5 * self.max_vx, 0.0)
