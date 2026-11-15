@@ -29,6 +29,9 @@ VLM answers closed visual questions and can choose navigation goals, running und
 
 ## Contents
 
+For the first central-to-edge integration boundary, see the
+[dispatch adapter contract notes](docs/DISPATCH_ADAPTER.md).
+
 | Path | What it is |
 | --- | --- |
 | `hello_puppy.py` | Loads the PuppyPi into Isaac Sim and runs a sequence of movements (stand, walk, turn, sit, wave, ...). |

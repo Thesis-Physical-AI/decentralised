@@ -1,0 +1,124 @@
+{
+  "mission_id": "M-DISPATCH-SIM-001",
+  "world": {
+    "entities": {
+      "living_room": {
+        "kind": "room"
+      },
+      "table": {
+        "kind": "surface",
+        "in": "living_room"
+      },
+      "apple": {
+        "kind": "object",
+        "in": "table",
+        "weight_kg": 0.15
+      },
+      "crate": {
+        "kind": "container",
+        "in": "living_room"
+      },
+      "toy": {
+        "kind": "object",
+        "in": "living_room"
+      }
+    },
+    "open": [],
+    "robots": {
+      "puppypi_1": {
+        "at": "living_room"
+      }
+    }
+  },
+  "allocations": [
+    {
+      "task_id": "T1",
+      "robots": [
+        "puppypi_1"
+      ],
+      "rationale": "Single-platform integration fixture"
+    },
+    {
+      "task_id": "T2",
+      "robots": [
+        "puppypi_1"
+      ],
+      "rationale": "Single-platform integration fixture"
+    },
+    {
+      "task_id": "T3",
+      "robots": [
+        "puppypi_1"
+      ],
+      "rationale": "Single-platform integration fixture"
+    }
+  ],
+  "steps": [
+    {
+      "id": "S1",
+      "robot": "puppypi_1",
+      "task_id": "T1",
+      "action": "movetowards",
+      "args": {
+        "target": "table"
+      },
+      "instruction": "[movetowards] table",
+      "depends_on": []
+    },
+    {
+      "id": "S2",
+      "robot": "puppypi_1",
+      "task_id": "T1",
+      "action": "search",
+      "args": {
+        "object": "apple",
+        "area": "living_room"
+      },
+      "instruction": "[search] apple in living_room",
+      "depends_on": [
+        "S1"
+      ]
+    },
+    {
+      "id": "S3",
+      "robot": "puppypi_1",
+      "task_id": "T2",
+      "action": "movetowards",
+      "args": {
+        "target": "crate"
+      },
+      "instruction": "[movetowards] crate",
+      "depends_on": [
+        "S2"
+      ]
+    },
+    {
+      "id": "S4",
+      "robot": "puppypi_1",
+      "task_id": "T2",
+      "action": "search",
+      "args": {
+        "object": "toy",
+        "area": "living_room"
+      },
+      "instruction": "[search] toy in living_room",
+      "depends_on": [
+        "S3"
+      ]
+    },
+    {
+      "id": "S5",
+      "robot": "puppypi_1",
+      "task_id": "T3",
+      "action": "inspect",
+      "args": {
+        "target": "table"
+      },
+      "instruction": "[inspect] table",
+      "depends_on": [
+        "S4"
+      ]
+    }
+  ],
+  "unassigned": []
+}

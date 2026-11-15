@@ -11,11 +11,16 @@
     # questions (open ones in words, closed ones scored) and picks each command while the robot moves.
     # Watch it at http://127.0.0.1:8765/view
     $ISAACSIM_PATH/python.sh run_prototype.py --perceiver vlm --approach live --headless
+    # central dispatch: global dependency tracking, local executor registered for PuppyPi
+    $ISAACSIM_PATH/python.sh run_prototype.py --dispatch missions/dispatch_one_room.json --perceiver ground_truth --headless
 
 Steps run in order; a step is dispatched only if all its depends_on steps SUCCEEDED (a stand-in for
 the centralized Execution Manager). Writes runs/<timestamp>/results.json and, with --save-images,
 the camera image of every perception query. Every navigation goal and model answer is printed as it
 happens and appended to runs/<timestamp>/events.jsonl.
+With --dispatch, the execution manager preserves the fleet graph and halts new
+steps after any unsuccessful result. Missing peer executors leave steps pending.
+Managed runs exit 2 for HALTED/PENDING, 0 for SUCCEEDED; legacy demo behavior is retained.
 """
 import argparse
 import json
@@ -27,6 +32,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 parser = argparse.ArgumentParser()
 parser.add_argument("--world", default=os.path.join(HERE, "sim", "worlds", "one_room.json"))
 parser.add_argument("--mission", default=os.path.join(HERE, "missions", "demo_one_room.json"))
+parser.add_argument("--dispatch", help="validated central dispatch JSON; overrides --mission")
+parser.add_argument("--plan-revision", type=int, default=0)
+parser.add_argument("--step-timeout-s", type=float, default=120.0)
 parser.add_argument("--usd", default=os.path.join(HERE, "puppy_isaac", "puppy_isaac.usda"))
 parser.add_argument("--perceiver", choices=["vlm", "ground_truth"], default="vlm")
 parser.add_argument("--vlm-url", default="http://127.0.0.1:8765")
@@ -57,6 +65,7 @@ from isaacsim import SimulationApp  # noqa: E402
 simulation_app = SimulationApp({"headless": args.headless})
 
 from puppy_agent.contracts import SUCCEEDED, StepAssignment  # noqa: E402
+from puppy_agent.execution import ExecutionManager  # noqa: E402
 from puppy_agent.executor import ExecutorConfig, StepExecutor  # noqa: E402
 from puppy_agent.navigation import SimpleNavigator  # noqa: E402
 from puppy_agent.perception import GroundTruthPerceiver, VlmPerceiver  # noqa: E402
@@ -84,8 +93,12 @@ THRESHOLDS = {
 def main():
     with open(args.world, encoding="utf-8") as f:
         world = json.load(f)
-    with open(args.mission, encoding="utf-8") as f:
+    with open(args.dispatch or args.mission, encoding="utf-8") as f:
         mission = json.load(f)
+    manager = (ExecutionManager(mission, plan_revision=args.plan_revision, timeout_s=args.step_timeout_s)
+               if args.dispatch else None)
+    if manager:
+        mission = manager.mission
     robot_id = world["robot"]["id"]
     out = args.out or os.path.join(HERE, "runs", datetime.now().strftime("%Y%m%d-%H%M%S") + "-" + args.perceiver
                                    + ("" if args.approach == "map" else "-" + args.approach))
@@ -158,20 +171,11 @@ def main():
                             camera=sim.capture, safety_check=sim.safety, config=config,
                             on_query=save_image, on_event=log_event)
 
-    status, records = {}, []
-    for raw in mission["steps"]:
-        step = StepAssignment.from_dict({"mission_id": mission["mission_id"], "plan_revision": 0,
-                                         "robot_id": robot_id, **raw})
-        blocked_by = [d for d in step.depends_on if status.get(d) != SUCCEEDED]
-        if blocked_by:
-            status[step.step_id] = "NOT_DISPATCHED"
-            records.append({"step_id": step.step_id, "instruction": step.instruction,
-                            "status": "NOT_DISPATCHED", "reason": f"dependencies not succeeded: {blocked_by}"})
-            print(f"[{step.step_id}] {step.instruction:32s} NOT_DISPATCHED (waiting on {blocked_by})", flush=True)
-            continue
+    records = []
+
+    def execute_and_record(step):
         wall, sim_t0 = time.perf_counter(), sim.now()
         result = executor.execute(step, robot_id)
-        status[step.step_id] = result.status
         pose = sim.odom()
         record = {"step_id": step.step_id, "instruction": step.instruction, **result.to_dict(),
                   "sim_seconds": round(sim.now() - sim_t0, 2), "wall_seconds": round(time.perf_counter() - wall, 2),
@@ -182,14 +186,44 @@ def main():
         print(f"[{step.step_id}] {step.instruction:32s} {line:28s} {result.reason}  "
               f"(sim {record['sim_seconds']} s, {len(executor.trace.queries)} queries)", flush=True)
 
+        return result
+
+    execution_report = None
+    if manager:
+        execution_report = manager.run({robot_id: execute_and_record})
+        recorded = {r["step_id"] for r in records}
+        records.extend(r for r in execution_report["steps"] if r["step_id"] not in recorded)
+    else:
+        status = {}
+        for raw in mission["steps"]:
+            step = StepAssignment.from_dict({"mission_id": mission["mission_id"],
+                                             "plan_revision": mission.get("plan_revision", 0),
+                                             "robot_id": robot_id, **raw})
+            blocked_by = [d for d in step.depends_on if status.get(d) != SUCCEEDED]
+            if blocked_by:
+                status[step.step_id] = "NOT_DISPATCHED"
+                records.append({"step_id": step.step_id, "instruction": step.instruction,
+                                "status": "NOT_DISPATCHED",
+                                "reason": f"dependencies not succeeded: {blocked_by}"})
+                print(f"[{step.step_id}] NOT_DISPATCHED (waiting on {blocked_by})", flush=True)
+                continue
+            status[step.step_id] = execute_and_record(step).status
+
     events.close()
     summary = {"mission_id": mission["mission_id"], "perceiver": args.perceiver, "approach": args.approach,
                "world": os.path.basename(args.world), "steps": records}
+    if execution_report:
+        summary["execution"] = execution_report
     with open(os.path.join(out, "results.json"), "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
     print(f"results: {os.path.join(out, 'results.json')}", flush=True)
     sim.close()
+    return 2 if execution_report and execution_report["status"] != "SUCCEEDED" else 0
 
 
-main()
-simulation_app.close()
+exit_code = 1
+try:
+    exit_code = main()
+finally:
+    simulation_app.close(exit_code=exit_code)
+raise SystemExit(exit_code)
