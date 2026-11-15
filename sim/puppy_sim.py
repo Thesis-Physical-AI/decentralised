@@ -132,7 +132,8 @@ class PuppySim:
 
     def advance(self, seconds):
         for _ in range(max(1, round(seconds / PHYSICS_DT))):
-            self._set_feet(self.gait.update(PHYSICS_DT, self.vx, self.wz))
+            roll, pitch = self._base_state()[4:6] if self.gait.level_gain else (0.0, 0.0)
+            self._set_feet(self.gait.update(PHYSICS_DT, self.vx, self.wz, roll, pitch))
             SimulationManager.step()
             self.app.update()
             self.t += PHYSICS_DT
