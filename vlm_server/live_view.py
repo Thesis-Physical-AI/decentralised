@@ -134,6 +134,7 @@ PAGE = """<!doctype html>
 :root { --bg:#f6f7f9; --panel:#fff; --text:#1c2128; --muted:#5f6b7a; --line:#dde2e8; --yes:#1f8a4c; --no:#b4372d; --accent:#2f6fd0; }
 @media (prefers-color-scheme: dark) { :root { --bg:#121417; --panel:#1b1f24; --text:#e6e9ee; --muted:#9aa5b1; --line:#2c333b; --yes:#4cc27e; --no:#ef6f63; --accent:#6ea2f0; } }
 * { box-sizing:border-box; }
+[hidden] { display:none !important; }
 body { margin:0; background:var(--bg); color:var(--text); font:15px/1.45 system-ui, sans-serif; }
 header { padding:12px 16px; border-bottom:1px solid var(--line); display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; }
 header h1 { font-size:17px; margin:0; } header span { color:var(--muted); font-size:13px; }
