@@ -196,6 +196,10 @@ class StepExecutor:
             if analysis.age_s > self.config.max_decision_age_s:
                 self._event("rejected", analysis, f"stale: image was {analysis.age_s:.1f} s old")
                 continue
+            if not analysis.visible and action != "back":
+                if action != "search":
+                    self._event("rejected", analysis, f"{entity.name} not visible; searching instead of {action}")
+                action = "search"
             if action == "arrived":
                 arrived, why = self._accept_arrival(entity)
                 if arrived:
@@ -206,7 +210,7 @@ class StepExecutor:
             if action == "search" and searched >= 2 * math.pi:
                 raise _StepEnded(c.BLOCKED, "OBJECT_NOT_FOUND", f"{entity.name} not in view after a full turn")
             history.append(action)
-            self._start(motion_for(action, self.robot.odom(), history, self.config.motion), analysis)
+            self._start(motion_for(action, self.robot.odom(), history, self.config.motion), action)
 
     def _search_live(self, target, region):
         """Turn in search_turns increments while the feed is analysed; a frame where the object is visible
@@ -245,12 +249,14 @@ class StepExecutor:
         """Deterministic checks before an "arrived" claim ends the step."""
         self.nav.cancel()
         self.robot.set_cmd_vel(0.0, 0.0)
-        if self.config.near_source == "map" and entity.position is not None:
-            return (self._is_near(entity), "map distance says not near yet")
+        map_near = self.config.near_source == "map" and entity.position is not None
+        if map_near and not self._is_near(entity):
+            return False, "map distance says not near yet"
         if not self.config.confirm_arrival:
             return True, ""
         analysis = self._still_analysis()
-        return validate(analysis.action) == "arrived", f"not confirmed on a still image ({analysis.action})"
+        return (analysis.visible and (map_near or analysis.near) and validate(analysis.action) == "arrived",
+                f"not confirmed on a still image (action={analysis.action}, visible={analysis.visible}, near={analysis.near})")
 
     # -- live feed ---------------------------------------------------------------------------
     def _open_feed(self, entity, history):
@@ -307,9 +313,9 @@ class StepExecutor:
         self._drive_for(self.config.settle_s)
         return self._next_analysis(newer_than=self.robot.now())
 
-    def _start(self, motion, choice):
+    def _start(self, motion, action):
         """Send a validated motion to the navigator, replacing the one in progress."""
-        event = {"step_id": self.step.step_id, "event": "command", "action": choice.action, "motion": motion.kind}
+        event = {"step_id": self.step.step_id, "event": "command", "action": action, "motion": motion.kind}
         if motion.kind == "go_to":
             self.nav.go_to(motion.goal)
             event["goal"] = [round(motion.goal.x, 3), round(motion.goal.y, 3), round(motion.goal.yaw, 3)]

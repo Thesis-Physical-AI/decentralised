@@ -27,6 +27,7 @@ import json
 import os
 import time
 from datetime import datetime
+from pathlib import Path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 parser = argparse.ArgumentParser()
@@ -55,8 +56,14 @@ parser.add_argument("--feed-mode", choices=["async", "lockstep"], default="async
 parser.add_argument("--open-tokens", type=int, default=32, help="live: max tokens of each open (worded) answer")
 parser.add_argument("--near-source", choices=["vlm", "map"], default="vlm",
                     help="visual approach: stop when the VLM says the target is close, or by map distance")
+parser.add_argument("--session-dir", help="Local revision mailbox; keep this simulator session alive")
+parser.add_argument("--session-idle-timeout", type=float, default=3600)
 parser.add_argument("--headless", action="store_true")
 args = parser.parse_args()
+if args.session_dir and not args.dispatch:
+    parser.error("--session-dir requires --dispatch")
+if args.session_idle_timeout <= 0:
+    parser.error("--session-idle-timeout must be positive")
 if args.feed_hz < 1.0:
     parser.error("--feed-hz must be at least 1")
 
@@ -66,6 +73,7 @@ simulation_app = SimulationApp({"headless": args.headless})
 
 from puppy_agent.contracts import SUCCEEDED, StepAssignment  # noqa: E402
 from puppy_agent.execution import ExecutionManager  # noqa: E402
+from puppy_agent.session import ExecutionSession, Mailbox, write_json  # noqa: E402
 from puppy_agent.executor import ExecutorConfig, StepExecutor  # noqa: E402
 from puppy_agent.navigation import SimpleNavigator  # noqa: E402
 from puppy_agent.perception import GroundTruthPerceiver, VlmPerceiver  # noqa: E402
@@ -131,10 +139,11 @@ def main():
             Image.fromarray(image).save(os.path.join(out, f"{image_count[0]:03d}_{step_id}_{entity}_{label}.png"))
             image_count[0] += 1
 
+    current_revision = [args.plan_revision]
     events = open(os.path.join(out, "events.jsonl"), "w", encoding="utf-8")
 
     def log_event(event):
-        event = {"sim_t": round(sim.now(), 2), **event}
+        event = {"sim_t": round(sim.now(), 2), "plan_revision": current_revision[0], **event}
         events.write(json.dumps(event) + "\n")
         events.flush()
         if event["event"] == "answer" and event["question"] == "analyze":
@@ -188,37 +197,84 @@ def main():
 
         return result
 
-    execution_report = None
-    if manager:
-        execution_report = manager.run({robot_id: execute_and_record})
-        recorded = {r["step_id"] for r in records}
-        records.extend(r for r in execution_report["steps"] if r["step_id"] not in recorded)
-    else:
-        status = {}
-        for raw in mission["steps"]:
-            step = StepAssignment.from_dict({"mission_id": mission["mission_id"],
-                                             "plan_revision": mission.get("plan_revision", 0),
-                                             "robot_id": robot_id, **raw})
-            blocked_by = [d for d in step.depends_on if status.get(d) != SUCCEEDED]
-            if blocked_by:
-                status[step.step_id] = "NOT_DISPATCHED"
-                records.append({"step_id": step.step_id, "instruction": step.instruction,
-                                "status": "NOT_DISPATCHED",
-                                "reason": f"dependencies not succeeded: {blocked_by}"})
-                print(f"[{step.step_id}] NOT_DISPATCHED (waiting on {blocked_by})", flush=True)
-                continue
-            status[step.step_id] = execute_and_record(step).status
+    def run_once(active_manager):
+        records.clear()
+        execution_report = None
+        if active_manager:
+            execution_report = active_manager.run({robot_id: execute_and_record})
+            recorded = {r["step_id"] for r in records}
+            records.extend(r for r in execution_report["steps"] if r["step_id"] not in recorded)
+        else:
+            status = {}
+            for raw in mission["steps"]:
+                step = StepAssignment.from_dict({"mission_id": mission["mission_id"],
+                                                 "plan_revision": mission.get("plan_revision", 0),
+                                                 "robot_id": robot_id, **raw})
+                blocked_by = [d for d in step.depends_on if status.get(d) != SUCCEEDED]
+                if blocked_by:
+                    status[step.step_id] = "NOT_DISPATCHED"
+                    records.append({"step_id": step.step_id, "instruction": step.instruction,
+                                    "status": "NOT_DISPATCHED",
+                                    "reason": f"dependencies not succeeded: {blocked_by}"})
+                    print(f"[{step.step_id}] NOT_DISPATCHED (waiting on {blocked_by})", flush=True)
+                    continue
+                status[step.step_id] = execute_and_record(step).status
 
+        summary = {"mission_id": mission["mission_id"], "perceiver": args.perceiver, "approach": args.approach,
+                   "world": os.path.basename(args.world), "steps": records}
+        if execution_report:
+            summary["execution"] = execution_report
+        write_json(Path(out) / "results.json", summary)
+        print(f"results: {os.path.join(out, 'results.json')}", flush=True)
+        return summary
+
+    summary = None
+    if args.session_dir:
+        import omni.timeline
+        timeline = omni.timeline.get_timeline_interface()
+        mailbox = Mailbox(args.session_dir)
+        session = ExecutionSession(mission["mission_id"], revision=args.plan_revision,
+                                   timeout_s=args.step_timeout_s)
+        def measure_checkpoint():
+            timeline.pause()
+            pose = sim.odom()
+            return {"pose": [pose.x, pose.y, pose.yaw], "sim_time": sim.now(), "safety": sim.safety()}
+        mailbox.publish(session)
+        while simulation_app.is_running():
+            current_revision[0] = session.revision
+            start_pose = sim.odom()
+            summary = run_once(manager)
+            summary.update(session_id=session.session_id,
+                           start_pose=[start_pose.x, start_pose.y, start_pose.yaw])
+            sim.set_cmd_vel(0, 0)
+            timeline.pause()  # keep Kit responsive without advancing physics while awaiting a revision
+            pose = sim.odom()
+            session.idle(pose=[pose.x, pose.y, pose.yaw], sim_time=sim.now(), safety=sim.safety())
+            summary["checkpoint"] = session.state()
+            write_json(mailbox.root / "reports" / f"{session.revision}.json", summary)
+            write_json(Path(out) / "results.json", summary)
+            mailbox.publish(session)
+            deadline = time.monotonic() + args.session_idle_timeout
+            manager = None
+            while simulation_app.is_running() and session.phase == "IDLE":
+                manager = mailbox.next_command(session, measure_checkpoint)
+                if time.monotonic() > deadline:
+                    session.phase, session.token = "CLOSED", None
+                    mailbox.publish(session)
+                simulation_app.update()
+                time.sleep(.02)
+            if session.phase == "CLOSED" or manager is None:
+                break
+            timeline.play()
+        session.phase, session.token = "CLOSED", None
+        mailbox.publish(session)
+    else:
+        summary = run_once(manager)
     events.close()
-    summary = {"mission_id": mission["mission_id"], "perceiver": args.perceiver, "approach": args.approach,
-               "world": os.path.basename(args.world), "steps": records}
-    if execution_report:
-        summary["execution"] = execution_report
-    with open(os.path.join(out, "results.json"), "w", encoding="utf-8") as f:
-        json.dump(summary, f, indent=2)
-    print(f"results: {os.path.join(out, 'results.json')}", flush=True)
+    execution_report = summary.get("execution") if summary else None
+
     sim.close()
-    return 2 if execution_report and execution_report["status"] != "SUCCEEDED" else 0
+    return 2 if summary is None or (execution_report and execution_report["status"] != "SUCCEEDED") else 0
 
 
 exit_code = 1

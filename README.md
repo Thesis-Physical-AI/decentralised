@@ -29,6 +29,12 @@ VLM answers closed visual questions and can choose navigation goals, running und
 
 ## Contents
 
+Persistent recovery is available with `run_prototype.py --dispatch <plan.json>
+--session-dir <new-directory>`. The same simulator waits at an idle checkpoint
+for validated revision activation; normal runs without this flag remain one-shot.
+The centralized dashboard drives this protocol. See
+[recovery lifecycle and limits](../centralized/RECOVERY.md).
+
 For the first central-to-edge integration boundary, see the
 [dispatch adapter contract notes](docs/DISPATCH_ADAPTER.md).
 

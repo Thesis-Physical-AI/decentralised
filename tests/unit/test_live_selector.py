@@ -26,8 +26,9 @@ def live_executor(robot, perceiver, events=None, **config):
 class Scripted:
     """Plays a list of actions, then hands over to a fallback perceiver (or repeats the last action)."""
 
-    def __init__(self, actions, latency_s=0.0, fallback=None, robot=None):
+    def __init__(self, actions, latency_s=0.0, fallback=None, robot=None, visible=True, near=True):
         self.actions, self.latency_s, self.fallback, self.robot = list(actions), latency_s, fallback, robot
+        self.visible, self.near = visible, near
         self.moving_when_asked = []
 
     def analyze(self, image, questions, entity):
@@ -35,7 +36,8 @@ class Scripted:
             self.moving_when_asked.append(self.robot.vx != 0.0 or self.robot.wz != 0.0)
         if self.actions:
             action = self.actions.pop(0) if len(self.actions) > 1 or self.fallback else self.actions[0]
-            return FrameAnalysis("vlm", self.latency_s, {}, action=action, action_scores={action: 0.9},
+            return FrameAnalysis("vlm", self.latency_s, {}, visible=self.visible, near=self.near,
+                                 action=action, action_scores={action: 0.9},
                                  target=f"scripted {action}")
         analysis = self.fallback.analyze(image, questions, entity)
         analysis.latency_s = self.latency_s
@@ -156,3 +158,36 @@ def test_decision_cap_bounds_a_model_that_never_arrives():
     executor.config.max_queries = 10
     result = executor.execute(step("movetowards", {"target": "table"}, timeout_s=600), "puppypi_1")
     assert (result.status, result.reason_code) == (c.FAILED, "DECISION_LIMIT")
+
+
+@pytest.mark.parametrize("action", ["forward", "left", "right", "arrived"])
+def test_unseen_target_overrides_model_motion_and_false_arrival(action):
+    robot, events = KinematicRobot(), []
+    result = live_executor(robot, Scripted([action], visible=False), events).execute(
+        step("inspect", {"target": "table"}), "puppypi_1")
+    assert (result.status, result.reason_code) == (c.BLOCKED, "OBJECT_NOT_FOUND")
+    assert set(commands(events)) == {"search"}
+    assert robot.pose.x == pytest.approx(0.0) and robot.pose.y == pytest.approx(0.0)
+
+
+def test_repeated_arrival_without_nearness_cannot_succeed():
+    robot = KinematicRobot()
+    executor = live_executor(robot, Scripted(["arrived"], near=False))
+    executor.config.max_queries = 10
+    result = executor.execute(step("inspect", {"target": "table"}), "puppypi_1")
+    assert (result.status, result.reason_code) == (c.FAILED, "DECISION_LIMIT")
+
+
+@pytest.mark.parametrize("near_source", ["vlm", "map"])
+def test_target_lost_on_still_frame_cannot_confirm_arrival(near_source):
+    class LostTarget(Scripted):
+        def analyze(self, image, questions, entity):
+            analysis = super().analyze(image, questions, entity)
+            self.visible = False  # visible in the first moving frame only
+            return analysis
+
+    robot, events = KinematicRobot(x=1.0), []
+    result = live_executor(robot, LostTarget(["arrived"]), events, near_source=near_source).execute(
+        step("inspect", {"target": "table"}), "puppypi_1")
+    assert (result.status, result.reason_code) == (c.BLOCKED, "OBJECT_NOT_FOUND")
+    assert any(e["event"] == "rejected" and "still image" in e["reason"] for e in events)
